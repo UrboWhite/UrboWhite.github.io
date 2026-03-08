@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teorija Metasistema - Urbo White</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-gray-100 font-sans selection:bg-white selection:text-black">
+
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-white z-50 transition-all duration-150" style="width: 0%"></div>
+
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <aside class="md:w-72 w-full bg-black/60 backdrop-blur-xl border-r border-gray-800 p-6 md:sticky md:top-0 md:h-screen overflow-y-auto z-40">
+            <div class="mb-8">
+                <h1 class="text-sm font-bold tracking-[0.2em] uppercase text-white border-b border-gray-800 pb-4">Navigacija</h1>
+            </div>
+            <nav id="menu" class="space-y-1 text-sm text-gray-400">
+                </nav>
+            <div class="mt-10 pt-6 border-t border-gray-800 flex flex-col gap-3">
+                <button onclick="downloadPDF()" class="text-[10px] border border-gray-600 px-4 py-2 hover:bg-white hover:text-black transition uppercase tracking-widest font-bold">Preuzmi PDF</button>
+                <div class="flex flex-wrap gap-2">
+                    <a href="https://orcid.org/0009-0005-9619-4843" target="_blank" class="text-[9px] bg-zinc-900 border border-zinc-800 px-2 py-1 rounded hover:border-white transition">ORCID</a>
+                    <a href="https://doi.org/10.5281/zenodo.18911028" target="_blank" class="text-[9px] bg-zinc-900 border border-zinc-800 px-2 py-1 rounded hover:border-white transition">DOI</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex-1 p-6 md:p-16 lg:p-24 max-w-5xl mx-auto">
+            <header class="mb-16 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="relative w-full max-w-md">
+                    <input type="text" id="search" placeholder="Pretraži koncepte (npr. Hell-Loop)..." class="bg-zinc-900/50 border border-zinc-800 text-sm rounded-lg py-3 px-5 w-full focus:outline-none focus:border-white transition">
+                </div>
+                <div class="text-[10px] uppercase tracking-widest text-gray-500">Urbo White &copy; 2026</div>
+            </header>
+
+            <article id="content" class="prose prose-invert prose-headings:font-serif prose-p:text-gray-400 prose-blockquote:border-white prose-blockquote:font-serif prose-blockquote:bg-zinc-900/30 prose-blockquote:p-6 prose-img:rounded-xl max-w-none">
+                </article>
+
+            <footer class="mt-32 pt-10 border-t border-zinc-800 text-center">
+                <p class="text-xs text-gray-600 uppercase tracking-widest mb-2">Kontakt Autor</p>
+                <a href="mailto:urbo.white1@gmail.com" class="text-white hover:line-through transition">urbo.white1@gmail.com</a>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

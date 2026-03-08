@@ -1,0 +1,30 @@
+body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+.font-serif { font-family: 'Playfair Display', serif; }
+
+/* Scroll-spy */
+.active-link {
+    color: white !important;
+    font-weight: 600;
+    padding-left: 12px;
+    border-left: 1px solid white;
+}
+
+/* Custom Typography */
+h2 { 
+    margin-top: 4rem !important; 
+    letter-spacing: -0.02em;
+    text-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+/* PDF print fix */
+@media print {
+    aside, header, #progress-bar, footer { display: none !important; }
+    main { padding: 0 !important; max-width: 100% !important; }
+    body { background: white !important; color: black !important; }
+    .prose { color: black !important; max-width: 100% !important; }
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #fff; }
