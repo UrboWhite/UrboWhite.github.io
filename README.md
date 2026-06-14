@@ -5,7 +5,7 @@ Official research webpage for the Metasystem Theory project.
 
 ## Metasystem Theory: A Path Towards a Model of the Conscious Machine
 
-Bridging philosophy, second-order cybernetics, and experimental design, this book offers a coherent framework for engineering **Artificial Awareness (AA)** — concluding that consciousness is not a mystery to be explained, but a process to be engineered.
+Bridging philosophy, second-order cybernetics, and experimental design, this book offers a coherent framework for engineering <b>Artificial Awareness (AA)</b> — concluding that consciousness is not a mystery to be explained, but a process to be engineered.
 
 Today's artificial intelligence researchers ask many questions, but one question has never received a proper answer — it keeps returning, in different forms, across various fields of research.
 
