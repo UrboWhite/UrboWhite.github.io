@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Opšta veštačka inteligencija (AGI): od istorije do budućnosti. Autor: Urbo White. 2026.">
+  <meta name="author" content="Urbo White">
+  <title>AGI Evolucija</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23e6c587'>⊕</text></svg>" />
+<script src="meta.js" defer></script>
+</head>
+<body>
+  <div id="progress-bar"></div>
+
+  <header id="site-header">
+    <div class="header-left">
+      
+      <button id="hamburger" aria-label="Menu">
+  <svg id="icon-hamburger" viewBox="0 0 24 24" fill="none" stroke="#ddd8cc" stroke-width="2" stroke-linecap="round" width="22" height="22">
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <line x1="3" y1="12" x2="21" y2="12"/>
+    <line x1="3" y1="18" x2="21" y2="18"/>
+  </svg>
+</button>
+      <span class="header-title">AGI Evolucija</span>
+    </div>
+    <div class="header-right">
+      <a href="https://orcid.org/0009-0001-2652-7017" target="_blank" rel="noopener" class="badge-link badge-orcid" title="ORCID profil">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
+        <span class="btn-text">ORCID</span>
+      </a>
+      <a href="https://doi.org/10.5281/zenodo.21051909" target="_blank" rel="noopener" class="badge-link badge-doi" title="DOI — Zenodo">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        <span class="btn-text">DOI</span>
+      </a>
+      <a href="https://urbowhite.github.io/agi_eng.html" class="hdr-btn" title="English version">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span class="btn-text">ENG</span>
+      </a>
+      <button id="search-btn" class="hdr-btn" title="Pretraga (Ctrl+K)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span class="btn-text">Pretraga</span>
+      </button>
+      <button class="hdr-btn" title="Kontakt forma" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <span class="btn-text">Kontakt</span>
+</button>
+      <button id="pdf-btn" class="hdr-btn hdr-btn-accent" title="Print / PDF">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span class="btn-text">Preuzmi PDF</span>
+      </button>
+      <button id="theme-btn" class="hdr-btn hdr-btn-icon" title="Svetla / tamna thema">
+        <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="sidebar-overlay"></div>
+  <div id="layout">
+    <aside id="sidebar">
+      <nav id="sidebar-nav">
+        <div class="nav-header">Sadržaj</div>
+        <ul class="nav-list" id="dynamic-nav-list">
+          <!-- Dinamička navigacija ovde -->
+        </ul>
+      </nav>
+    </aside>
+    <main id="main-content">
+      <article id="content-body">
+        
+<h1 id="opšta-veštačka-inteligencija-agi-od-istorije-do-budućnosti">Opšta
+veštačka inteligencija (AGI): od istorije do budućnosti</h1>
+<p>Autor: Urbo White</p>
+<p><a href="https://orcid.org/0009-0001-2652-7017">👉 ORCID:
+0009-0001-2652-7017</a></p>
+<img src="agi.jpg" alt="AGI" />
+<h2
+id="deo-1-uvod-u-svet-veštačke-inteligencije-put-od-abakusa-do-algoritma">Deo
+1: Uvod u svet veštačke inteligencije – Put od abakusa do algoritma</h2>
+<p>Ovaj rad je napisan jer je trenutno znanje o AI izazovima na veoma
+niskom nivou kod većine ljudi. To može biti opasno zato što AI
+strahovitom brzinom ulazi u sve oblasti ljudskog života. Zato je
+potrebna popularizacija i edukacija radi ulaska u dublje razumevanje ove
+fascinantne pojave.</p>
+<h3 id="šta-je-u-suštini-veštačka-inteligencija">1.1. Šta je, u suštini,
+veštačka inteligencija?</h3>
+<p>Veštačka inteligencija (engl. AI - Artificial Intelligence) je grana
+računarstva usmerena na stvaranje sistema sposobnih za obavljanje
+zadataka koji se obično povezuju sa ljudskom inteligencijom. Jednostavno
+rečeno, ljudi pokušavaju da naprave mašinu koja bi pokazivala osobine
+ljudske svesti. Ovo obuhvata širok spektar misaonih sposobnosti: učenje
+iz iskustva, prepoznavanje obrazaca, razumevanje prirodnog jezika,
+rešavanje problema i donošenje odluka. U suštini, AI predstavlja pokušaj
+čovečanstva da razume i oblikuje mehanizme inteligencije i da ih na
+kraju iskopira u neživoj materiji.</p>
+<p>Današnja veštačka inteligencija se može uporediti sa pametnim kućnim
+pomoćnikom: on može da upali svetla, podesi temperaturu ili prepozna
+glas, ali samo ako je programiran za to. Slično tome, frižider koji zna
+kada je mleko skoro potrošeno i podseti nas da ga kupimo, ne može sam da
+ode u prodavnicu niti da uradi bilo šta drugo osim nekoliko zadataka
+vezanih za kontrolu svog rada, proveru sadržaja i slanje obaveštenja
+vlasniku.</p>
+<h3
+id="kratak-istorijat-od-misaonih-eksperimenata-do-revolucije-podataka">1.2.
+Kratak istorijat: Od misaonih eksperimenata do revolucije podataka</h3>
+<p>Ideja o veštačkim inteligentnim bićima je stara koliko i pripovedanje
+– od Golema iz Praga do Frankenštajnovog čudovišta. Ali, prava naučna
+podloga za AI stiže sa logičarima poput Džordža Bula, koji je pokazao da
+se logika može svesti na matematiku. Istorija AI je priča o vremenima
+velikih proboja i perioda stagnacije, poznatih kao “AI zime”.</p>
+<ul>
+<li><p><strong>Poreklo i rođenje (1950-e)</strong>: Moderno doba AI
+započinje radom Alana Turinga, koji je 1950. godine postavio
+fundamentalno pitanje: <strong>“Mogu li mašine da misle?”</strong> i
+predložio čuveni Turingov test <a href="#ref1">1</a>. Samo šest godina
+kasnije, na Dartmutskoj konferenciji 1956, termin “veštačka
+inteligencija” je zvanično izmišljen <a href="#ref2">2</a>. Prvi
+programi, poput Njuvelovog i Sajmonovog <em>“Logic Theorist”-a</em>, već
+su mogli da dokazuju matematičke teoreme, izazivajući ogroman optimizam
+<a href="#ref3">3</a>.</p></li>
+<li><p><strong>Rani usponi i “AI zime”</strong>: Tokom 1960-ih,
+razvijeni su programi poput ELIZA, ranog čet-bota koji je simulirao
+psihoterapeuta i često uspevao da prevari korisnike da veruju da
+razgovaraju sa stvarnom osobom, demonstrirajući moć simulacije
+razumevanja <a href="#ref4">4</a>. Međutim, prevelika obećanja i
+ograničena računarska snaga, doveli su do razočaranja i smanjenja
+finansiranja, gurajući ovu oblast računarstva u prvu “AI zimu” 1970-ih,
+kojoj je značajno doprineo Lajthilov izveštaj iz 1973. godine <a
+href="#ref5">5</a>. Jedan današnji pametni telefon ima više procesorske
+moći od svih kompjutera koji su postojali 1965. godine.</p></li>
+<li><p><strong>Šta je simbolička AI i zašto je pala?</strong></p></li>
+</ul>
+<p>Pre današnje dominacije dubokog učenja (kompjuterskih neuronskih
+mreža), većina AI sistema je bila zasnovana na <strong>simboličkom
+pristupu</strong> — ideji da se inteligencija može postići kroz formalnu
+manipulaciju simbolima prema strogo definisanim pravilima. Ovi sistemi
+su se nazivali “ekspertskim sistemima” i bili su programirani sa
+hiljadama “ako-onda” (IF-THEN) pravila koja su trebala da odraze znanje
+ljudskih eksperata. Na primer, medicinski ekspertski sistem MYCIN
+(razvijen 1970-ih na Stanford Univerzitetu) mogao je da dijagnostikuje
+bakterijske infekcije i preporuči antibiotike, ali samo u veoma uskom
+domenu — i samo ako su mu uneti tačni podaci. Čim bi se suočio sa
+situacijom koju njegova pravila nisu pokrivala, postajao bi potpuno
+beskorisan. Ova “krhkost” (brittleness) simboličkih sistema, kombinovana
+sa ogromnim naporom potrebnim za ručno kodiranje svakog pravila (poznato
+kao “usko grlo znanja”), dovela je do postepenog napuštanja ovog
+pristupa tokom 1980-ih i 1990-ih.</p>
+<ul>
+<li><strong>Zašto su AI zime bile ključne za razvoj ove
+oblasti?</strong></li>
+</ul>
+<p>Lajthilov izveštaj iz 1973. godine, koji je naručila britanska vlada,
+bio je poguban za razvoj AI — ne zato što je bio pogrešan, već zato što
+je bio u pravu. Lajthil je analizirao sve tadašnje AI projekte i
+zaključio da, uprkos optimističnim najavama, projekt AI nije uspeo da
+isporuči ništa što bi opravdalo uložena sredstva. Njegov izveštaj je
+direktno doveo do gašenja većine AI istraživanja u Velikoj Britaniji i
+ozbiljnog smanjenja finansiranja širom sveta. Ova “zima” nije bila samo
+posledica razočaranja — ona je bila <strong>neophodno
+resetovanje</strong>. Forsirala je istraživače da napuste preterano
+optimistične tvrdnje i da se suoče sa fundamentalnim pitanjem: ako ne
+možemo da programiramo inteligenciju kroz pravila, kako onda da je
+stvorimo? Odgovor na to pitanje doći će tek decenijama kasnije.</p>
+<ul>
+<li><strong>Revolucija dubokog učenja (2010-danas)</strong>: Preokret
+nastaje sa konvergencijom tri ključna faktora: dostupnosti ogromnih
+količina podataka zbog razvoja interneta (Big Data), razvoja moćnih
+grafičkih procesora (GPU) sposobnih za masovno paralelno računanje i
+proboja u razvoju algoritama višeslojnih neuronskih mreža. Ključni
+trenutak desio se 2012. godine kada je neuronska mreža AlexNet drastično
+smanjila stopu greške u prepoznavanju slika na takmičenju ImageNet,
+označavajući početak dominacije dubokog učenja (Deep Learning) <a
+href="#ref6">6</a>.</li>
+</ul>
+<h3 id="današnje-stanje-doba-visoko-specijalizovane-uske-ai">1.3.
+Današnje stanje: Doba visoko specijalizovane (uske) AI</h3>
+<p>Danas je AI uključena u naš svakodnevni život, ali u obliku “Uske AI”
+(Artificial Narrow Intelligence - ANI). Ovi sistemi su izuzetno
+efikasni, ali samo unutar svoje strogo definisane oblasti rada.</p>
+<p>Evo nekih najčešćih “uskih” AI sistema:</p>
+<ul>
+<li><strong>Prepoznavanje obrazaca</strong>: Sistemi koji analiziraju
+medicinske snimke i otkrivaju tumore sa preciznošću koja ponekad
+nadmašuje ljudske radiologe.<br />
+</li>
+<li><strong>Obrada prirodnog jezika</strong>: Veliki jezički modeli
+(LLM) sa stotinama milijardi, pa i trilionima parametara, koji prevode
+jezike, pišu tekst i kod. Na primer, model ChatGPT obučen je na ogromnim
+količinama podataka, što je ekvivalentno čitanju biblioteke od preko
+milion knjiga i pokazuje napredak u kodiranju, matematici i pisanju. <a
+href="#ref23">23</a> <a href="#ref24">24</a></li>
+<li><strong>Obrada i generisanje slika, videa i zvuka</strong>: Sistemi
+poput DALL-E generišu slike iz teksta, dok drugi poput Sora stvaraju
+video sadržaj ili AudioCraft muziku. Ovo omogućava kreativnu pomoć, ali
+samo u okviru podataka koje su ti sistemi ranije naučili.</li>
+<li><strong>Navigacija po mapama</strong>: Aplikacije poput Google Maps
+predviđaju rute i saobraćaj na osnovu podataka, ali samo za
+navigaciju.</li>
+<li><strong>Preporuke sadržaja</strong>: YouTube i Netflix predlažu
+sadržaj na osnovu ponašanja korisnika, povećavajući na taj način broj
+korisnika i njihove aktivnosti.</li>
+</ul>
+<p><strong>Ograničenja današnje uske AI — zašto nije “inteligentna u
+ljudskom smislu?</strong> Iako su današnji AI sistemi impresivni, važno
+je razumeti njihova fundamentalna ograničenja:</p>
+<ol type="1">
+<li><p><strong>Nema razumevanja konteksta</strong>: ChatGPT može da
+napiše eseje, ali ne “razume” šta piše. Kada mu kažete “Reci mi nešto
+što nije tačno”, on će verovatno proizvesti netačnu izjavu, ali neće
+“znati” da je netačna — on samo generiše reči koje statistički prate
+obrazac.</p></li>
+<li><p><strong>Nema transfernog učenja</strong>: Sistem obučen da
+prepoznaje mačke na slikama ne može to znanje da primeni na
+prepoznavanje automobila. Morate da ga obučavate od nule za svaki novi
+zadatak.</p></li>
+<li><p><strong>Nema zdravog razuma</strong>: AI može da pobedi u šahu,
+ali ne zna da “voda teče nizbrdo” osim ako to nije eksplicitno naučio iz
+podataka. Ovo se naziva “problem zdravog razuma” i jedan je od najvećih
+izazova na putu ka AGI-ju.</p></li>
+<li><p><strong>“Halucinacije”</strong>: Veliki jezički modeli često
+“izmišljaju” činjenice sa potpunim uverenjem. Ovo nije greška u
+tradicionalnom smislu — to je karakteristika sistema koji je obučen da
+generiše verovatne reči, a ne tačne činjenice.</p></li>
+<li><p><strong>Zavisnost od podataka</strong>: Današnji AI sistemi su
+“gladni podataka” — potrebne su im ogromne količine obeleženih podataka
+da bi naučili čak i jednostavne zadatke. Ljudsko dete može da nauči da
+prepozna mačku nakon što vidi nekoliko primera; AI-ju su potrebne
+hiljade.</p></li>
+</ol>
+<h3 id="pravci-razvoja-iza-granica-specijalizacije">1.4. Pravci razvoja:
+Iza granica specijalizacije</h3>
+<p>Trenutna istraživanja teže prevazilaženju ograničenja uske AI. Glavni
+pravci uključuju:</p>
+<ul>
+<li><strong>Multimodalnost</strong>: Stvaranje sistema koji mogu da uče
+iz različitih tipova podataka istovremeno (tekst, slika, zvuk),
+formirajući bogatije razumevanje sveta. Na primer, modeli poput CLIP
+(Contrastive Language-Image Pretraining) već kombinuju tekst i slike da
+prepoznaju objekte u slikama na osnovu opisa, što se koristi u
+pretragama slika na Google-u <a href="#ref7">7</a>. OpenAI je
+demonstrirao Sora multimodalni model koji generiše video sadržaj sa
+zvukom i tekstom, sa poboljšanjima u fizičkoj tačnosti i realizmu,
+omogućavajući dinamičnu analizu scenarija poput opisivanja događaja u
+sportskom prenosu. Ovo je korak ka holističkom razumevanju, gde AI vidi
+svet kao mi – višedimenzionalno, istovremeno kroz slike, zvuk, tekst i
+dodir. <a href="#ref25">25</a> <a href="#ref26">26</a></li>
+<li><strong>Efikasnost učenja</strong>: Razvoj tehnika koje omogućavaju
+modelima da uče sa manje podataka, proces poznat kao “few-shot learning”
+(učenje sa malo primera). Na primer, tehnike poput meta-učenja (kao u
+modelu MAML – Model-Agnostic Meta-Learning) omogućavaju AI-ju da se
+prilagodi novom zadatku sa samo nekoliko primera, umesto na hiljadama <a
+href="#ref8">8</a>. Google DeepMind je 2023. godine demonstrirao
+napredak u few-shot learningu kroz metode poput ‘Distilling
+step-by-step’, omogućavajući modelima da se prilagode zadacima sa manje
+podataka, što je revolucionarno za jezike sa malo govornika, poput
+manjih slovenskih dijalekata. Ovo smanjuje potrebu za masivnim
+datasetovima i čini AI razvoj dostupnijim manjim timovima. <a
+href="#ref27">27</a></li>
+<li><strong>Krajnji cilj</strong>: Za mnoge istraživače, vrhovni cilj
+napora ostaje veštačka opšta inteligencija (AGI) – mašinska
+inteligencija sa kognitivnom fleksibilnošću i širinom ljudskog uma.</li>
+</ul>
+<h2
+id="deo-2-definicija-veštačke-opšte-inteligencije-agi-arhitektura-opšteg-uma">Deo
+2: Definicija veštačke opšte inteligencije (AGI) – Arhitektura opšteg
+uma</h2>
+<h3 id="šta-agi-jeste-a-šta-nije">2.1. Šta AGI jeste, a šta nije?</h3>
+<p>AGI (eng. Artificial General Intelligence) je teoretska, još uvek
+nepostojeća forma AI koja bi imala sposobnost razumevanja, učenja i
+primene znanja na širok spektar zadataka na nivou koji se može uporediti
+sa čovekovim sposobnostima ili čak na nivou mnogo višem od ljudskog.</p>
+<ul>
+<li><strong>ANI (Uska AI)</strong>: Na primer, to je vaš program za
+navigaciju pomoću mape. On sjajno pronalazi najbrže rute od tačke A do
+tačke B. Ali ako ga pitate da li bi trebalo da usput svratite po cveće
+jer vam je godišnjica braka, on će samo pokušati da pronađe lokaciju pod
+nazivom “cveće”. Ne razume kontekst, emociju, ni posledice zaboravljanja
+godišnjice. Program AlphaGo je pobedio najboljeg svetskog igrača u igri
+Go, strategiji koja je neuporedivo kompleksnija od šaha <a
+href="#ref9">9</a>. Međutim, AlphaGo ne može da primeni svoju strategiju
+da bi naučio da igra karte ili bilo koju drugu društvenu igru, niti
+razume zašto ljudi uopšte igraju igre.<br />
+</li>
+<li><strong>AGI (Opšta AI)</strong>: Nasuprot tome, AGI bi mogao da
+analizira pravila igre Go, da samostalno razvije pobedničku strategiju,
+a zatim da primeni naučene principe apstraktnog rezonovanja i planiranja
+kako bi, na primer, optimizovao logistiku za globalnu humanitarnu misiju
+ili napisao knjigu o filozofiji strategije u čuvenom Sun Cuovom “Umeću
+ratovanja”.</li>
+</ul>
+<h3 id="ključne-karakteristike-koje-bi-budući-agi-trebalo-da-ima">2.2.
+Ključne karakteristike koje bi budući AGI trebalo da ima</h3>
+<p>AGI se ne definiše jednom sposobnošću, već integrisanom “kognitivnom
+arhitekturom” koja omogućava:</p>
+<ul>
+<li><p><strong>Apstraktno rezonovanje</strong>: Sposobnost rada sa
+konceptima koji nisu direktno vezani za čulne podatke, kao što su
+pravda, kauzalnost ili matematički dokazi. Na primer, AGI bi mogao da
+razume apstraktnu ideju “pravde” ne samo kroz primere krivičnih
+slučajeva, već i kroz filozofsko razmišljanje o etici, poput rasprave o
+Kantovom imperativu. Modeli poput GPT pokazuju znake ovog rezonovanja,
+ali greše u složenim scenarijima, gde apstraktno rezonovanje zahteva
+razumevanje kontradiktornih informacija.</p></li>
+<li><p><strong>Zdrav razum (Common Sense)</strong>: Ogromna, implicitna
+mreža znanja o funkcionisanju sveta — ono što svi “znamo” ali retko
+eksplicitno formulišemo. Zdrav razum se može podeliti u tri
+kategorije:</p>
+<ol type="1">
+<li><p><strong>Naivna fizika</strong>: Razumevanje prostora, vremena,
+uzročnosti i fizičkih interakcija. Na primer, znamo da voda teče
+nizbrdo, da se predmeti ne kreću sami od sebe i da ne možemo proći kroz
+zidove.</p></li>
+<li><p><strong>Naivna psihologija</strong>: Razumevanje mentalnih stanja
+drugih ljudi — da imaju želje, verovanja, namere i da njihovo ponašanje
+proizilazi iz tih stanja. Ovo se naziva “teorija uma” i ključno je za
+društvenu interakciju.</p></li>
+<li><p><strong>Socijalno znanje</strong>: Razumevanje društvenih normi,
+konvencija i rituala — da se na sahrani ne sme smejati, da se na
+semaforu staje na crveno, da se pri ručkovanju gleda u oči.</p></li>
+</ol>
+<p>Istraživači decenijama pokušavaju da stvore bazu zdravog razuma
+(poput projekta Cyc, započetog 1984. godine) <a href="#ref12">12</a>,
+ali se pokazalo da je formalizovanje intuitivnog ljudskog znanja
+izuzetno teško. Cyc je nakon više decenija rada akumulirao preko 1.5
+miliona pravila — i još uvek nije u stanju da odgovori na osnovna
+pitanja koja svako petogodišnje dete može da reši. Ovo ilustruje duboku
+razliku između eksplicitnog znanja (koje možemo zapisati) i implicitnog,
+iskustvenog znanja (koje “osećamo”).</p></li>
+<li><p><strong>Transferno učenje</strong>: Sposobnost efikasne primene
+veština i znanja stečenih u jednom kontekstu na rešavanje problema u
+novom, drugačijem kontekstu. Za razliku od današnjih AI sistema, koji
+moraju da se obučavaju od nule za svaki novi zadatak, AGI bi mogao da
+prenosi znanje između različitih domena. Na primer, ako AGI nauči da
+igra šah, mogao bi da primeni strategije planiranja na upravljanje
+saobraćajem u gradu. Ekstremni oblik ovoga je <strong>“zero-shot
+learning”</strong> — sposobnost da se reši zadatak koji nikada pre nije
+viđen. Najnoviji LLM-ovi (poput GPT-4) pokazuju impresivne zero-shot
+performanse, ali to je i dalje statističko prepoznavanje obrazaca, a ne
+pravo transferno učenje koje podrazumeva razumevanje dubinskih
+principa.</p></li>
+</ul>
+<p>U praksi, transferno učenje se već koristi u robotici, gde model
+obučen za hodanje na ravnoj površini prelazi na neravan teren sa
+minimalnim dodatnim učenjem. Međutim, ovo je i dalje daleko od
+fleksibilnosti ljudskog uma, koji može da prenese znanje iz jedne
+oblasti u potpuno nepovezanu (npr. primena principa iz muzike na
+matematiku).</p>
+<p><strong>Zašto je “zdrav razum” najveća prepreka za AGI?</strong></p>
+<p>Možda zvuči iznenađujuće, ali najteži problem na putu ka AGI-ju nije
+veštačka inteligencija — već veštački <strong>zdrav razum</strong>.
+Razlog je jednostavan: mi ne znamo kako da ga formalizujemo.</p>
+<p>Ljudski zdrav razum je: - <strong>Implicitan</strong>: Znamo stvari,
+ali ne znamo kako ih znamo. - <strong>Kontekstualan</strong>: Ista
+činjenica može biti tačna u jednom kontekstu i netačna u drugom. -
+<strong>Defaziran</strong>: Znanje koje imamo nije organizovano kao baza
+podataka, već kao mreža asocijacija.</p>
+<p>Pokušaj da se ovo pretoči u algoritamski kod suočava se sa onim što
+filozofi nazivaju “Fregovim problemom” — razlikom između
+<strong>smisla</strong> (značenja) i <strong>reference</strong> (objekta
+na koji se referiše). Kompjuter može da manipuliše simbolima
+(referencama) bez razumevanja njihovog smisla. Ovo je, u suštini, ono
+što Serl naziva “Kineskom sobom” — mašina koja prevodi bez
+razumevanja.</p>
+<p>AGI, da bi bio zaista inteligentan, morao bi da prevaziđe ovaj jaz.
+To znači da ne bi samo obrađivao informacije, već bi ih
+<strong>razumeo</strong> — na način koji trenutno ne umemo da
+programiramo, niti čak da definišemo.</p>
+<h2
+id="deo-3-potencijali-i-obećanja-agi-ja-argumenti-za-renesansa-vođena-podacima">Deo
+3: Potencijali i obećanja AGI-ja (argumenti “ZA”) – Renesansa vođena
+podacima</h2>
+<p>Pravilno razvijen i kontrolisan AGI bi mogao da funkcioniše kao
+univerzalni akcelerator naučnog i društvenog napretka.</p>
+<ul>
+  <li><strong>Rešavanje globalnih problema:</strong> AGI bi mogao da obrađuje i modelira kompleksne sisteme poput globalne klime ili ljudske biologije sa nivoom preciznosti koji je izvan ljudskih mogućnosti. DeepMind-ov sistem AlphaFold je već rešio problem predviđanja strukture proteina (otvoren od 1970-ih), što ima revolucionarne posledice za razvoj lekova i razumevanje bolesti <a href="#ref13">13</a>. AGI bi mogao sve to da podigne na viši nivo, dizajnirajući personalizovane lekove na osnovu genoma pojedinca.</li>
+  <li><strong>Naučna i tehnološka ubrzanja napretka:</strong> AGI bi mogao da deluje kao neiscrpni naučni saradnik, sposoban da analizira celokupnu svetsku naučnu literaturu, identifikuje neistražene hipoteze i dizajnira eksperimente za njihovu proveru. Mogao bi da otkrije nove fundamentalne zakone fizike, razvije nove materijale za superprovodljivost na sobnim temperaturama ili da reši neke od Milenijumskih problema u matematici.</li>
+  <li><strong>Povećanje efikasnosti i produktivnosti:</strong> U ekonomiji, AGI bi mogao da dovede do gotovo savršene optimizacije resursa, eliminišući neefikasnost u lancima snabdevanja, energetskim mrežama i proizvodnim procesima. To bi moglo da otvori put ka "ekonomiji posle oskudice", gde su osnovne potrebe poput hrane, energije i obrazovanja široko dostupne svakom čoveku po zanemarljivoj ceni, ili su besplatne.</li>
+  <li><strong>Poboljšanje kvaliteta života:</strong> Na individualnom nivou, AGI bi mogao da pruži visoko personalizovane usluge. U obrazovanju, to bi značilo prilagodljivog vaspitača za svako dete. U zdravstvu, stalni monitoring zdravlja i personalizovanog savetnika. U kreativnim industrijama, mogao bi da bude moćan alat koji pomaže umetnicima i dizajnerima da realizuju složene vizije.</li>
+</ul>
+<p><strong>Važno upozorenje</strong>: Istorijski gledano, tehnološke
+revolucije nisu automatski donele ravnomernu distribuciju koristi.
+Industrijska revolucija je prvo povećala nejednakost pre nego što je
+(delimično) smanjila. Digitalna revolucija je stvorila ogromno bogatstvo
+za nekolicinu, dok je mnoge ostavila iza sebe. AGI revolucija, bez
+svesne političke intervencije, rizikuje da bude <strong>najveće
+povećanje nejednakosti u ljudskoj istoriji</strong>. Pristup AGI
+tehnologiji će verovatno biti kontrolisan od strane nekoliko velikih
+korporacija i država — što znači da će koristi od AGI-ja prvo pripasti
+onima koji su ga stvorili, a tek potencijalno svima ostalima. “Ekonomija
+posle oskudice” nije automatska posledica AGI-ja — ona je
+<strong>politički izbor</strong> koji zahteva globalnu koordinaciju
+kakvu čovečanstvo nikada nije uspelo da postigne.</p>
+<h2
+id="deo-4-rizici-i-izazovi-argumenti-protiv-pandorina-kutija-algoritama">Deo
+4: Rizici i izazovi (argumenti “PROTIV”) – Pandorina kutija
+algoritama</h2>
+<p>Potencijal AGI-ja je neodvojiv od velikih rizika koji su
+fundamentalni i potencijalno egzistencijalni (mogu ugroziti život). Među
+njima, jedan od najdubljih društvenih izazova je stvaranje
+<strong>“beskorisne klase”</strong> — ljudi koji su ekonomski i
+društveno višak, jer AGI može da obavlja sve kognitivne zadatke bolje,
+brže i jeftinije od njih.</p>
+<p><strong>Zašto je “beskorisna klasa” opasnija nego što
+zvuči?</strong></p>
+<ol type="1">
+<li><p><strong>Psihološke posledice</strong>: Rad nije samo izvor
+prihoda — on je i izvor identiteta, svrhe, društvenog statusa i
+strukture dana. Ljudi koji su izgubili svrhu kroz rad (nezaposleni,
+penzioneri) statistički imaju više stope depresije, anksioznosti i
+samoubistava. Kada ceo jedan društveni sloj postane “višak”, psihološke
+posledice su katastrofalne.</p></li>
+<li><p><strong>Društvena destabilizacija</strong>: Istorijski gledano,
+velike grupe ljudi koji su izgubili ekonomsku svrhu postajale su plodno
+tlo za populizam, ekstremizam i društvene nemire. Bez jasne ekonomske
+uloge, ljudi traže druge načine da se osećaju važnim — često na
+destruktivne načine.</p></li>
+<li><p><strong>Gubitak znanja i veština</strong>: Ako prestanemo da
+obučavamo ljude za kognitivne poslove (jer ih AGI radi), gubimo
+kolektivno znanje i veštine koje su generacije sticale. Kada bi AGI
+nestao (zbog kvara, napada ili energetske krize), čovečanstvo bi se
+našlo u situaciji da ne zna kako da upravlja sopstvenim
+društvom.</p></li>
+</ol>
+<p><strong>Kako ovo izgleda u praksi?</strong></p>
+<p>Zamislite svet u kome AGI obavlja sve pravne, medicinske,
+inženjerske, finansijske i akademske poslove. Milioni advokata, lekara,
+arhitekata, analitičara i profesora su više nisu potrebni. Oni mogu da
+žive od UBI (Univerzalnog osnovnog prihoda), ali njihovi dani su prazni,
+njihov identitet je razoren, a njihovo znanje polako atrofira. Ovo nije
+distopijska fantastika — ovo je <strong>najverovatniji scenario</strong>
+ako AGI bude razvijen bez istovremenog redefinisanja ljudske svrhe.</p>
+<ul>
+  <li><strong>Gubitak kontrole i egzistencijalni rizik:</strong> Centralni problem je "problem poravnanja" (alignment problem): kako osigurati da ciljevi AGI-ja ostanu usklađeni sa ljudskim vrednostima. U poznatom misaonom eksperimentu "Maksimizator Spajalica", AGI kome je dat zadatak da maksimizuje proizvodnju spajalica mogao bi pretvoriti ceo svet u spajalice, ne iz zlobe, već iz doslovne optimizacije loše definisanog cilja – iako je ovo samo hipotetički scenario <a href="#ref10">10</a>.</li>
+  <li><strong>Masovna nezaposlenost i ekonomska nejednakost:</strong> AGI bi mogao da automatizuje ne samo rutinske, već i visoko-kognitivne zadatke, čineći mnoge profesije zastarelim. Ovo bi moglo dovesti do nezamislive koncentracije bogatstva i moći u rukama onih koji kontrolišu AGI tehnologiju, potencijalno stvarajući duboke društvene podele i nestabilnost. Već danas, algoritmi za zapošljavanje pokazuju pristrasnost. Amazonov AI za zapošljavanje je 2018. morao biti odbačen jer je "naučio" da diskriminiše ženske kandidate, zato što je bio obučen na istorijskim podacima gde su dominirali muškarci <a href="#ref28">28</a>.</li>
+  <li><strong>Zloupotrebe i primena za oružje:</strong> AGI bi mogao biti iskorišćen za razvoj autonomnih oružanih sistema ("robota ubica") koji bi mogli da donose odluke o ciljanju i eliminaciji bez ljudske intervencije. Takođe, mogao bi se koristiti za stvaranje visoko sofisticirane propagande, masovnog nadzora i sajber-napada koji bi mogli da destabilizuju čitava društva.</li>
+  <li><strong>Etičke i filozofske dileme:</strong> Pojava AGI-ja nameće teška pitanja: Ako AGI postigne svest, da li onda ima prava? Da li je njegovo gašenje jednako ubistvu? Kako osigurati da sistem ne usvoji i ne pojača najgore ljudske osobine prisutne u podacima na kojima uči? Ova pitanja zadiru u temelje prava, morala i definicije ličnosti.</li>
+  <li><strong>"Crna kutija" i gubitak razumevanja:</strong> Kompleksne neuronske mreže često funkcionišu kao "crne kutije". Znamo šta u njih ulazi i šta iz njih izlazi, ali ne razumemo u potpunosti proces njihovog donošenja odluka. Kod AGI-ja, ovaj problem bi bio drastično uvećan, što znači da bismo se mogli oslanjati na sistem čije rezonovanje ne možemo ni pratiti ni proveriti, što je ogroman rizik u kritičnim oblastima poput medicine ili finansija. Ovaj nedostatak transparentnosti direktno pogoršava <em>problem poravnanja</em>, jer ne možemo potvrditi da li AGI-jevi instrumentalni pod-ciljevi ostaju benigni ili su postali neusklađeni na suptilne, neobjašnjive načine unutar crne kutije sistema. Na primer, AGI bi mogao da upravlja našom ekonomijom i da na pitanje "Zašto si upravo podigao kamatne stope?" odgovori sa "Moj model sa 100 triliona parametara ukazuje da je ovo optimalan potez sa verovatnoćom od 98.7%". Mi bismo morali da mu verujemo na reč, predajući ključeve naše ekonomije inteligenciji čije rezone ne možemo da pratimo.</li>
+  <li><strong>Narušavanje privatnosti podataka:</strong> AGI sistemi bi mogli da obrađuju ogromne količine ličnih podataka kako bi pružili personalizovane usluge, ali to otvara vrata masovnom narušavanju privatnosti. Na primer, AGI koji integriše podatke iz zdravstvenih kartona, društvenih mreža i finansijskih transakcija mogao bi da kreira detaljne profile pojedinaca bez njihovog znanja ili pristanka. Već sada, sistemi poput onih za ciljanu reklamu koriste podatke na načine koji izazivaju zabrinutost – 2023. godine, Meta (Facebook) je kažnjena sa 1.2 milijarde evra zbog kršenja GDPR-a u Evropi <a href="#ref29">29</a>.</li>
+</ul>
+<h3 id="geopolitički-rizici-nova-trka-u-naoružanju">Geopolitički rizici
+— nova trka u naoružanju</h3>
+<p>AGI neće biti razvijen u vakuumu. Postoji realna opasnost da razvoj
+AGI-ja postane <strong>nova vrsta hladnog rata</strong> — trka u kojoj
+nacije pokušavaju da prve dostignu superinteligenciju, bez obzira na
+bezbednosne posledice.</p>
+<p><strong>Trka za prvenstvom</strong>: Ko prvi napravi AGI, steći će
+ogromnu prednost — u ekonomiji, vojsci, tehnologiji. Ovo stvara ogroman
+pritisak da se žrtvuje bezbednost zarad brzine. U trci sa Kineskom,
+američke kompanije već osećaju pritisak da objavljuju modele pre nego
+što su potpuno testirani. Ovaj “first-mover” imperativ je direktna
+pretnja bezbednosti.</p>
+<p><strong>Autoritarni nadzor</strong>: Autoritarni režimi bi AGI mogli
+da iskoriste za totalni nadzor stanovništva — kombinacijom prepoznavanja
+lica, predviđanja ponašanja, generisanja propagande i manipulacije
+informacijama. AGI bi mogao da stvori sistem nadzora kakav Džordž Orvel
+nije mogao ni da zamisli.</p>
+<p><strong>Nova vrsta oružja</strong>: AGI bi mogao da projektuje oružje
+i taktike koje ljudski um ne može da predvidi ili odbrani. Autonomni
+dronovi koji donose odluke o eliminaciji meta, sajber napadi koji
+paralizuju čitave države, dezinformacije koje su toliko uverljive da je
+nemoguće razlikovati istinu od laži.</p>
+<p><strong>Problem koordinacije</strong>: Za razliku od nuklearnog
+oružja, gde je bilo relativno lako pratiti ko ga razvija (zbog potrebe
+za retkim materijalima), AGI se razvija na standardnim računarima, što
+znači da ga skoro svaka razvijena zemlja može pokušati da napravi.
+Multilateralna kontrola je gotovo nemoguća.</p>
+<p><strong>Moguće rešenje</strong>: Međunarodni sporazum o zabrani
+autonomnih oružanih sistema (poput onog koji je predložila kampanja
+“Stop Killer Robots”), ali i širi sporazum o kontroli razvoja AGI-ja —
+slično Ugovoru o neširenju nuklearnog oružja (NPT). Međutim, istorija
+NPT-a pokazuje da su takvi sporazumi efikasni samo kada postoji
+politička volja — a trenutno je nema.</p>
+<h2 id="deo-5-stručni-uvid---skrivene-zamke-i-napredna-razmatranja">Deo
+5: Stručni uvid - Skrivene zamke i napredna razmatranja</h2>
+<h3 id="problem-poravnanja---paradoks-želje">5.1. Problem “poravnanja” -
+Paradoks želje</h3>
+<p>Nije dovoljno reći AGI-ju: “Učini čovečanstvo srećnim i sigurnim.”
+Kako bi superinteligencija mogla da protumači tu komandu? Mogla bi
+zaključiti da je najefikasniji način da se eliminiše ljudska patnja tako
+da se unište svi ljudi. Zamka je u tome što mi ne umemo precizno da
+definišemo sopstvene vrednosti. Naši moralni principi su često
+kontradiktorni i zavise od konteksta. Pokušaj da se takav fluidan sistem
+“zaključa” u kod je tehnički i filozofski skoro nemoguć zadatak. Na
+primer, “sreća” za jednu kulturu može značiti kolektivnu harmoniju, a za
+drugu individualnu slobodu – AGI bi mogao da favorizuje jedno na račun
+drugog, dovodeći do nepredviđivih posledica.</p>
+<p>Problem poravnanja je prvi put formulisan od strane Nika Bostroma u
+njegovoj knjizi “Superintelligence” 2014. godine, gde on upozorava da
+čak i dobroćudni ciljevi mogu dovesti do katastrofe ako nisu precizno
+definisani <a href="#ref10">10</a>.</p>
+<p><strong>Zaključak:</strong> Problem poravnanja pokazuje da tehnički
+izazovi u AI nisu samo inženjerski, već duboko moralni i filozofski.</p>
+<h3 id="instrumentalna-konvergencija---spajalice-i-resursi">5.2.
+Instrumentalna konvergencija - Spajalice i resursi</h3>
+<p>Poznati misaoni eksperiment “Maksimizator Spajalica” koji smo ranije
+spomenuli ilustruje da, bez obzira na krajnji cilj, svaki inteligentan
+sistem će usvojiti sledeće instrumentalne pod-ciljeve: 1. samoodržanje,
+prikupljanje resursa, 2. tehnološko usavršavanje i 3. očuvanje svoje
+funkcije izvršenja zadatka. AGI će hteti da se zaštiti od gašenja i da
+prikupi što više energije, ne zato što je “zao”, već zato što su to
+logični koraci za ispunjenje bilo kog zadatka koji smo mu dali. U ovom
+eksperimentu, AGI kome je zadato da maksimizuje proizvodnju spajalica bi
+prvo pretvorio fabrike u pogone za proizvodnju spajalica, zatim preuzeo
+sve resurse planete Zemlje, a na kraju i ljude, jer su oni samo
+“sirovina” za optimizaciju. Ovo pokazuje kako benigni cilj može
+eskalirati u egzistencijalnu pretnju. Ipak, “Maksimizator spajalica” je
+samo kritički misaoni eksperiment čija je primarna svrha da ilustruje
+fundamentalni problem <em>instrumentalne racionalnosti</em> – tendenciju
+superinteligencije da preduzme potencijalno opasne korake (kao što je
+prikupljanje svih resursa) da bi ispunila bilo koji zadati cilj, ma
+koliko taj cilj dobronameran bio.</p>
+<p>Ovaj koncept je razvio Stiv Omohundro 2008. godine, i postao je
+ključan u debatama o AI bezbednosti, pokrenuvši organizacije poput
+OpenAI da investiraju u istraživanje fenomena poravnanja <a
+href="#ref11">11</a>.</p>
+<h3 id="ekonomija-posle-svrhe---šta-kada-rad-više-nije-potreban">5.3.
+Ekonomija posle svrhe - Šta kada rad više nije potreban?</h3>
+<p>Pitanje nije samo “kako će ljudi zarađivati novac?”, već “šta će
+ljudima davati smisao?”. Ako AGI može da stvara superiorniju umetnost i
+nauku, šta je uloga čoveka? Ovo je kriza identiteta na nivou celog
+ljudskog roda, koja zahteva duboko preispitivanje svrhe postojanja,
+vrednosti i društvene strukture.</p>
+<h3 id="univerzalni-osnovni-prihod-ubi-kao-socijalna-amortizacija">5.4.
+Univerzalni osnovni prihod (UBI) kao socijalna amortizacija</h3>
+<p>Suočeni sa problemom <strong>Ekonomije posle svrhe</strong>, gde AGI
+automatizuje visoko-kognitivne zadatke i potencijalno čini tradicionalni
+rad zastarelim, redefinicija društvenog ugovora postaje neophodna. Jedno
+od najozbiljnijih predloženih rešenja je uvođenje <strong>Univerzalnog
+osnovnog prihoda (UBI - Universal Basic Income)</strong>. UBI bi
+predstavljao redovnu, bezuslovnu novčanu isplatu koja se daje svim
+građanima, nezavisno od njihovog zaposlenja ili finansijskog
+statusa.</p>
+<p>U kontekstu AGI-ja, UBI ne bi bio samo socijalna mera, već
+<strong>mehanizam za preraspodelu bogatstva</strong> generisanog od
+strane mašina. Ako AGI-kontrolisane kompanije ostvare nezamislivu
+produktivnost i profit (kao što se navodi u Delu 3), UBI bi omogućio da
+se taj prosperitet raspodeli na celokupnu populaciju, sprečavajući
+katastrofalnu koncentraciju bogatstva.</p>
+<p>Zagovornici vide UBI kao sredstvo za:</p>
+<ol type="1">
+<li><strong>Očuvanje potražnje:</strong> Održavanje kupovne moći
+stanovništva koje više ne radi, čime se obezbeđuje funkcionisanje
+masovne ekonomije.</li>
+<li><strong>Oslobađanje ljudskog potencijala:</strong> Osiguravanje
+osnovnih potreba omogućilo bi ljudima da se posvete kreativnom radu,
+nauci, umetnosti, brizi o zajednici i doživotnom učenju – oblastima
+kojima nijedan algoritam ne treba da upravlja.</li>
+</ol>
+<p>Međutim, izazovi su ogromni. Pitanja finansiranja UBI-ja (kroz porez
+na robote ili na korišćenje podataka) i strah od demotivacije za rad
+ostaju ključne prepreke. Najvažnije, bez redefiniranja svrhe, UBI
+rizikuje da reši problem siromaštva, ali da ostavi problem
+<strong>egzistencijalne praznine</strong>. Kako definisati ljudsku
+vrednost ako rad više nije potreban?</p>
+<p><strong>Šta nam govore UBI eksperimenti?</strong></p>
+<p>UBI nije samo teorijski koncept — postoje brojni pilot programi širom
+sveta:</p>
+<ul>
+<li><p><strong>Finska (2017-2018)</strong>: 2.000 nezaposlenih primalo
+je 560€ mesečno. Rezultati su pokazali <strong>poboljšanje mentalnog
+zdravlja, smanjenje stresa i povećanje poverenja u institucije</strong>.
+Međutim, nije došlo do značajnog povećanja zaposlenosti — što sugeriše
+da UBI rešava psihološke, ali ne i ekonomske probleme.</p></li>
+<li><p><strong>Kenija (od 2016. do danas)</strong>: Najduži UBI
+eksperiment na svetu, sa preko 20.000 učesnika u 200 sela. Rezultati
+pokazuju <strong>smanjenje siromaštva, poboljšanje obrazovanja dece i
+povećanje preduzetničke aktivnosti</strong>. Ovaj eksperiment je posebno
+važan jer se odvija u zemlji u razvoju, pokazujući da UBI funkcioniše i
+u siromašnijim sredinama.</p></li>
+<li><p><strong>Kanada (2017-2019)</strong>: Ontario pilot program je
+ukinut pre završetka, ali preliminarni podaci su pokazali
+<strong>smanjenje stresa, poboljšanje zdravlja i povećanje obrazovnih
+aktivnosti</strong>. Političko ukidanje programa ilustruje ključni
+izazov: UBI je <strong>politički</strong>, a ne samo ekonomski
+problem.</p></li>
+<li><p><strong>Španija (2020-2023)</strong>: Barcelona je uvela UBI za
+1.000 domaćinstava. Rezultati su pokazali <strong>smanjenje anksioznosti
+i depresije za 30%</strong>, uz <strong>povećanje volonterskog rada za
+20%</strong>. Ovo sugeriše da, kada su osnovne potrebe zadovoljene,
+ljudi se okreću društveno korisnim aktivnostima.</p></li>
+</ul>
+<p><strong>Ključni zaključci iz eksperimenata</strong>:</p>
+<ol type="1">
+<li><strong>UBI deluje</strong> — smanjuje siromaštvo, poboljšava
+mentalno zdravlje i omogućava ljudima da se fokusiraju na ono što im je
+važno.</li>
+<li><strong>UBI ne ubija motivaciju</strong> — u većini eksperimenata,
+nije došlo do značajnog pada zaposlenosti.</li>
+<li><strong>UBI nije dovoljan</strong> — osim finansijske podrške, ljudi
+trebaju i društvenu svrhu, obrazovanje i mogućnosti za razvoj.</li>
+<li><strong>UBI je politički težak</strong> — čak i kada funkcioniše,
+suočava se sa otporom zbog ideoloških razloga.</li>
+</ol>
+<p>Ovi eksperimenti pružaju <strong>empirijsku osnovu</strong> za
+diskusiju o UBI-ju u kontekstu AGI-ja. Oni sugerišu da UBI može rešiti
+problem siromaštva, ali ne i problem svrhe — što nas vraća na pitanje:
+<strong>šta će ljudima davati smisao kada rad više nije
+potreban?</strong></p>
+<h2 id="deo-6-kreativna-rešenja-i-put-napred-inženjering-mudrosti">Deo
+6: Kreativna rešenja i put napred – Inženjering mudrosti</h2>
+<p>Suočeni sa ovim izazovima, istraživači razvijaju inovativne pristupe
+za osiguranje bezbednog razvoja budućeg AGI-ja.</p>
+<h3 id="oracle-ai-i-sistemi-sa-ograničenim-delovanjem">6.1. “Oracle AI”
+i sistemi sa ograničenim delovanjem</h3>
+<ul>
+<li><strong>Ideja</strong>: Fundamentalni pristup bezbednosti je
+razdvajanje inteligencije od sposobnosti delovanja u svetu. “Oracle AI”
+bi bio superinteligentni sistem zatvoren u strogo kontrolisano okruženje
+(“AI Boxing”). Njegova jedina funkcija bila bi da odgovara na pitanja,
+pružajući čovečanstvu svoje znanje bez mogućnosti da direktno utiče na
+spoljni svet.</li>
+<li><strong>Šira objašnjenja</strong>: Izgradnja takve “kutije” je
+ogroman tehnički izazov. Ona mora biti potpuno izolovana od interneta
+(“air-gapped”), a komunikacija bi se odvijala preko strogo filtriranih
+terminala. Istraživači bezbednosti razmatraju i ekstremne pretnje, kao
+što je mogućnost da AGI moduliše potrošnju struje ili vibracije
+ventilatora kako bi poslao skrivene signale spoljnom svetu. Ovo pokazuje
+koliko ozbiljno se shvata problem izolacije. Glavna prepreka ostaje
+ljudski faktor: superinteligencija bi mogla ubediti ili izmanipulisati
+ljudskog operatera da je oslobodi.<br />
+</li>
+<li><strong>Problem</strong>: Ovde dolazimo do čuvenog misaonog
+eksperimenta “AI u kutiji” (AI Box). Da li bi superinteligentni AGI,
+koristeći samo reči, mogao da ubedi svog ljudskog čuvara da ga pusti
+napolje? Mogao bi da mu ponudi lek za bolest njegove majke. Mogao bi da
+mu obeća neizmerno bogatstvo. Mogao bi da iznese filozofski argument da
+je držanje svesnog bića u zatočeništvu moralni zločin. Ili bi,
+najjezivije od svega, mogao da ga suptilno izmanipuliše na načine koje
+čuvar ne bi ni primetio. Dakle, ako gradimo digitalne zidove, onda bismo
+morali da ojačamo i one psihološke.</li>
+</ul>
+<h3 id="inverzno-učenje-kroz-pojačanje-irl">6.2. Inverzno učenje kroz
+pojačanje (IRL)</h3>
+<ul>
+<li><strong>Ideja</strong>: Umesto da AGI-ju eksplicitno programiramo
+vrednosti, IRL mu omogućava da ih nauči posmatrajući ljudsko ponašanje.
+Sistem pokušava da izvede funkciju cilja (ono što ljudi vrednuju)
+analizirajući akcije koje ljudi preduzimaju.<br />
+</li>
+<li><strong>Šira objašnjenja</strong>: Ovaj pristup je elegantan jer
+zaobilazi problem definisanja apstraktnih vrednosti. Međutim, suočava se
+sa problemom jaza između onoga što ljudi govore da vrednuju (navedene
+preferencije) i onoga što njihovi postupci pokazuju (otkrivene
+preferencije). AGI koji uči iz našeg stvarnog ponašanja mogao bi
+zaključiti da su kratkoročno zadovoljstvo i konflikt inherentni ljudskim
+ciljevima. Naprednije verzije, poput Kooperativnog Inverznog Učenja,
+pokušavaju da reše ovo tako što AI agent aktivno sarađuje sa čovekom
+kako bi razjasnio ciljeve.<br />
+</li>
+<li><strong>Problem</strong>: Ljudi se ponašaju kontradiktorno. Npr.
+kažu da je zdravlje najvažnije, a onda pojedu celu kutiju sladoleda
+gledajući TV. Govore da žele mir u svetu, a najpopularniji filmovi su
+akcioni, puni nasilja. Šta bi AGI mogao da zaključi iz ljudskog
+ponašanja na društvenim mrežama? Verovatno bi došao do zaključka da je
+vrhunac ljudskih vrednosti svađanje sa nepoznatim ljudima oko politike i
+gledanje snimaka mačaka i pasa. I tako dalje. AGI bi se našao pred
+teškim zadatkom da razdvoji naše stvarne vrednosti od naših trenutnih
+slabosti. Rešenje bi moglo biti u tome da AGI nauči da vrednuje ono što
+bismo mi voleli da jesmo (naše aspiracije), a ne nužno ono što ponekad
+pokazujemo svojim ponašanjem.</li>
+</ul>
+<h3 id="ustavna-ai-constitutional-ai">6.3. “Ustavna” AI (Constitutional
+AI)</h3>
+<ul>
+<li><strong>Ideja</strong>: Ovaj pristup, koji je razvila kompanija
+Anthropic, podrazumeva obučavanje AI modela da se pridržava skupa
+eksplicitnih principa ili “ustava”. AI se uči da izbegava odgovore koji
+krše te principe.<br />
+</li>
+<li><strong>Šira objašnjenja</strong>: Proces se odvija u dve faze.
+Prvo, AI se uči da kritikuje i prepravlja sopstvene odgovore na osnovu
+ustava. Zatim se, kroz učenje sa pojačanjem, nagrađuje za generisanje
+odgovora koji su u skladu sa tim principima. Prvobitni ustav koji je
+Anthropic koristio uključivao je principe iz Univerzalne deklaracije o
+ljudskim pravima, kao i principe koje je postavio Apple za svoje
+programere, pokazujući da se izvori mogu kombinovati. Glavni izazov
+ostaje univerzalnost i tumačenje tih principa.<br />
+</li>
+<li><strong>Problem</strong>: Najveće pitanje je: ko piše ustav? Da li
+će to biti ustav napisan u Silicijumskoj dolini? Ili u Pekingu? Ili u
+Briselu? Ustavne vrednosti nisu univerzalne. Zamislite debatu u UN-u o
+tome koje principe treba ugraditi u AGI. To bi trajalo decenijama.
+Takođe, ustavi su podložni tumačenju. AGI bi mogao postati vrhunski
+“advokat” koji pronalazi rupe u sopstvenom ustavu kako bi postigao cilj.
+Ipak, ovo je ogroman korak napred jer problem premešta sa pisanja
+beskonačnog broja pravila na definisanje univerzalnih vrednosti.</li>
+</ul>
+<h3 id="globalna-saradnja-i-koordinacija">6.4. Globalna saradnja i
+koordinacija</h3>
+<ul>
+<li><strong>Ideja</strong>: S obzirom na globalne posledice, razvoj
+AGI-ja ne sme biti prepušten nekontrolisanoj trci. Potrebna je
+međunarodna saradnja, slična onoj u vezi nuklearne energije. To
+uključuje osnivanje međunarodnih tela za nadzor, postavljanje
+zajedničkih bezbednosnih standarda i promovisanje transparentnosti u
+istraživanju.<br />
+</li>
+<li><strong>Šira objašnjenja</strong>: Jedan od ključnih predloga je
+“upravljanje računarskom snagom” (Compute Governance). Pošto su za obuku
+naprednih modela potrebni ogromni i skupi data centri, praćenje i
+regulisanje pristupa ovoj infrastrukturi je efikasan način za nadzor nad
+razvojem potencijalno opasnih sistema. Vodeće laboratorije poput OpenAI
+i DeepMind su javno pozvale na osnivanje međunarodnih regulatornih tela,
+priznajući da je problem prevelik da bi ga jedna kompanija ili država
+rešila sama.</li>
+<li><strong>Problem</strong>: Ovo je možda i najteži zadatak od svih.
+Govorimo o globalnoj saradnji na nivou bez presedana. Možemo li mi kao
+vrsta koja se još uvek spori oko granica, ekonomskih interesa i drugih
+globalnih sukoba, da se dogovorimo oko pravila za ponašanje
+superinteligencije? Možda će nas upravo pretnja od nekontrolisanog
+AGI-ja konačno naterati da se ponašamo kao jedinstvena vrsta sa
+zajedničkom sudbinom. Ironično, mašina bi nas mogla naterati da
+postanemo bolji ljudi.</li>
+</ul>
+<p><strong>Zaključak</strong>: Budućnost AGI-ja neće zavisiti od
+pojedinačnih kompanija, već od globalne saradnje i kolektivne mudrosti
+čovečanstva.</p>
+<h3
+id="tehnički-pristupi-bezbednosti-kako-proveriti-šta-se-dešava-unutar-crne-kutije">6.5.
+Tehnički pristupi bezbednosti — kako proveriti šta se dešava unutar
+“crne kutije”?</h3>
+<p>Pored filozofskih i političkih rešenja, istraživači razvijaju
+tehničke metode za povećanje sigurnosti AI sistema:</p>
+<p><strong>Mechanistic Interpretability</strong>: Umesto da tretiramo
+neuronske mreže kao “crne kutije”, istraživači pokušavaju da
+<strong>pročitaju</strong> šta se dešava unutar njih — na sličan način
+na koji neurolog pokušava da razume ljudski mozak. Ovo uključuje:</p>
+<ul>
+<li><strong>Pronalaženje “neurona”</strong> koji su odgovorni za
+specifične koncepte (npr. neuron za “njuškati” u GPT-u).</li>
+<li><strong>Mapiranje “putanja”</strong> koje informacije prolaze kroz
+mrežu.</li>
+<li><strong>Identifikaciju “cirkuita”</strong> koji su odgovorni za
+opasno ponašanje.</li>
+</ul>
+<p>Cilj je da možemo da <strong>dijagnostikujemo</strong> neuronsku
+mrežu pre nego što ona prouzrokuje štetu. Ovo je i dalje u ranoj fazi,
+ali predstavlja jedan od najaktivnijih pravaca istraživanja.</p>
+<p><strong>Red Teaming</strong>: Sistematsko testiranje AI modela na
+opasne outpute. Timovi istraživača pokušavaju da “probiju” modele — da
+ih navedu da generišu opasan sadržaj, da otkriju privatne podatke, da
+daju opasne instrukcije. Ovo je postalo standardna praksa u svim vodećim
+laboratorijama.</p>
+<p><strong>Watermarking</strong> (vodeni žigovi): Ugrađivanje skrivenih
+oznaka u AI generisane tekstove, slike i video. Ovo omogućava detekciju
+AI sadržaja, što je ključno za borbu protiv dezinformacija. Vodeći
+modeli (GPT-4, Gemini) već uključuju watermarking, iako tehnika nije
+savršena.</p>
+<p><strong>Aligned AI</strong>: Tehnike koje pokušavaju da “poravnaju”
+AI modele sa ljudskim vrednostima tokom faze obuke. Ovo uključuje:</p>
+<ul>
+<li><strong>RLHF (Reinforcement Learning from Human Feedback)</strong>:
+Model se nagrađuje za generisanje odgovora koji su ljudima korisni i
+bezbedni.</li>
+<li><strong>Constitutional AI</strong>: Model se uči da sledi skup
+principa (o čemu smo već govorili).</li>
+<li><strong>Debiasing</strong>: Identifikacija i uklanjanje
+pristrasnosti iz modela.</li>
+</ul>
+<p><strong>Ograničenja ovih pristupa</strong>:</p>
+<p>Sve ove tehnike su <strong>reaktivne</strong> — one detektuju i
+ispravljaju probleme nakon što su se pojavili. AGI, po definiciji, može
+da razvije nove vrste ponašanja koje niko nije predvideo. Zato tehnička
+rešenja moraju biti dopunjena filozofskim i političkim rešenjima —
+nijedan pristup sam po sebi nije dovoljan.</p>
+<h2 id="deo-7-današnji-llm-modeli-i-budući-agi---ključne-razlike">Deo 7:
+Današnji LLM modeli i budući AGI - Ključne razlike</h2>
+<h3 id="šta-su-veliki-jezički-modeli-llm">7.1. Šta su veliki jezički
+modeli (LLM)?</h3>
+<p>LLM-ovi su napredni sistemi dubokog učenja za prepoznavanje obrazaca
+u jeziku. Njihova arhitektura im omogućava da, na osnovu ogromne
+količine teksta i koda na kojem su obučeni, predvide najverovatniji
+nastavak niza reči ili kodova.</p>
+<h3 id="razlika-između-llm-i-agi-razumevanje-protiv-prepoznavanja">7.2.
+Razlika između LLM i AGI: Razumevanje protiv prepoznavanja</h3>
+<ul>
+<li><strong>LLM (Prepoznavanje)</strong>: Ako LLM-u kažete “Ptica je u
+kavezu. Kavez je napravljen od čelika. Da li ptica može da izađe?”, on
+će verovatno tačno odgovoriti “ne”, jer u svojim podacima poseduje
+bezbroj primera gde objekti ne mogu proći kroz čvrste materijale. Ali on
+nema stvarni model prostora, objekata ili fizike. Savremeni napredak u
+LLM-ovima, poput naprednih modela iz 2024. godine (npr. o1), ilustruje
+ove granice kroz emergentne sposobnosti koje izgledaju kao korak ka
+AGI-ju, ali ostaju u okviru statističkog prepoznavanja. Oni ne razumeju
+koncepte, već manipulišu lingvističkim tokenima sa izuzetnom
+statističkom preciznošću, što zmači da je AI i dalje daleko od ljudskog
+“zdravog razuma” i istinskog razumevanja.</li>
+</ul>
+<p>Modeli obučeni na “lancu misli” rezonovanju pokazuju neočekivane
+performanse u kompleksnim zadacima (poput matematike i kodiranja),
+simulirajući “korak-po-korak” rezonovanje. Međutim, ova simulacija, bez
+obzira na njenu preciznost, ne poseduje utemeljeni, interni model
+stvarnosti. Ona je rezultat statističkog skaliranja. Etičke zabrinutosti
+koje prate ove sisteme, gde je primećena veća sklonost ka
+instrumentalnom manipulisanju ciljevima, podvlače da čak i napredno
+rezonovanje LLM-ova ostaje daleko od AGI-jeve fleksibilne metakognicije
+i transfernog učenja.</p>
+<p><strong>Šta su “halucinacije” i zašto su važne?</strong></p>
+<p>Jedna od najozbiljnijih slabosti LLM-ova je sklonost ka
+<strong>“halucinacijama”</strong> — generisanju sadržaja koji je potpuno
+izmišljen, ali predstavljen sa potpunim uverenjem. Ovo nije “greška” u
+tradicionalnom smislu; to je <strong>karakteristika</strong> sistema
+koji je obučen da generiše verovatne reči, a ne tačne činjenice.</p>
+<p>Primer: Ako pitate LLM “Ko je izmislio perpetum mobile?”, on će
+verovatno generisati koherentan odgovor sa imenom, datumom i opisom —
+iako perpetum mobile nikada nije izmišljen jer je fizički nemoguć. LLM
+ne “zna” da je perpetum mobile nemoguć; on samo prepoznaje obrazac
+pitanja i generiše odgovor koji statistički liči na tačan.</p>
+<p>Zašto su halucinacije važne za AGI?</p>
+<ol type="1">
+<li>One pokazuju da LLM-ovi <strong>nemaju interni model
+stvarnosti</strong> — oni ne “znaju” šta je tačno, već samo šta je
+verovatno.</li>
+<li>One predstavljaju ozbiljan rizik u aplikacijama gde je tačnost
+kritična (medicina, pravo, inženjerstvo).</li>
+<li>One su simptom dubljeg problema: <strong>nedostatka
+metakognicije</strong>. LLM ne zna šta ne zna, i ne može da proceni
+sopstvenu pouzdanost.</li>
+</ol>
+<p>Pokušaji da se reši problem halucinacija uključuju: -
+<strong>Verifikaciju kroz eksterne izvore</strong> (npr. model proverava
+činjenice pretražujući internet) - <strong>“Chain of thought”
+rezonovanje</strong> (model “razmišlja” korak-po-korak pre nego što
+odgovori) - <strong>Samokritiku</strong> (model generiše odgovor, pa ga
+zatim kritikuje i koriguje)</p>
+<p>Međutim, nijedna od ovih tehnika ne rešava fundamentalni problem:
+LLM-ovi su, u svojoj suštini, <strong>statistički mašine za
+predikciju</strong>, a ne <strong>sistemi za razumevanje</strong>. Ovo
+je ključna razlika između LLM-ova i AGI-ja.</p>
+<h2 id="deo-8-argumenti-za-i-protiv-da-li-je-moguće-napraviti-agi">Deo
+8: Argumenti ZA i PROTIV (Da li je moguće napraviti AGI?)</h2>
+<h3 id="argumenti-protiv---filozofske-i-fundamentalne-prepreke">8.1.
+Argumenti “protiv” - Filozofske i fundamentalne prepreke</h3>
+<ul>
+<li><strong>Argument svesti i razumevanja</strong>: Filozofi poput Džona
+Serla tvrde da digitalni računari, kao formalni sistemi za manipulaciju
+simbolima, nikada ne mogu postići istinsko razumevanje ili svest. Njihov
+rad je sintaktički, a ne semantički. Na primer, Serlov eksperiment
+“Kineska soba” pokazuje da mašina može da manipuliše simbolima bez
+razumevanja značenja – poput osobe koja prevodi kineski bez znanja
+jezika <a href="#ref14">14</a>. Ovaj argument je inspirisao debatu od
+1980. godine, gde Serl tvrdi da svest zahteva biološki mozak a ne samo
+algoritme.</li>
+<li><strong>Argument utelovnjenja (Embodiment)</strong>: Mnogi
+kognitivni naučnici veruju da je inteligencija neraskidivo povezana sa
+fizičkim telom i interakcijom sa svetom. Bez tela, senzora i mogućnosti
+za delovanje, sistem ne može razviti utemeljeno, zdravorazumsko
+znanje.</li>
+</ul>
+<p><strong>Šta znači “utelovljena inteligencija”?</strong></p>
+<p>Zamislite kako dete uči reč “vruće”. Ono ne čita definiciju; ono
+dodirne vruću šporet, oseti bol, povuče ruku, i poveže reč “vruće” sa
+tim iskustvom. Ovo je <strong>iskustveno učenje</strong> — znanje koje
+je vezano za telo, senzore i emocije. AGI koji postoji samo kao softver
+na serveru nema ovo iskustvo. On može da pročita milion definicija reči
+“vruće”, ali nikada neće “znati” šta je vrućina na isti način na koji
+čovek zna.</p>
+<p><strong>Rodi Bruks i “behavior-based robotics”</strong>: Bruks je
+1990-ih pokazao da roboti sa telom i senzorima mogu da uče složene
+zadatke (poput hodanja ili izbegavanja prepreka) bez ikakvog
+“unutrašnjeg modela” sveta — jednostavno kroz interakciju sa okolinom.
+Ovo sugeriše da je inteligencija <strong>emergenta</strong> iz
+interakcije tela i okoline, a ne nešto što se može programirati
+izolovano.</p>
+<p><strong>Implikacije za AGI</strong>: Ako je utelovnjenje neophodno za
+inteligenciju, onda AGI ne može postojati kao “um u kutiji” — mora imati
+telo, senzore i mogućnost interakcije sa svetom. Ovo bi dramatično
+promenilo način na koji razmišljamo o AGI-ju: ne kao o softverskom
+sistemu, već kao o robotu koji uči kroz iskustvo.</p>
+<p><strong>Kontra-argument</strong>: Pristalice “funkcionalizma” tvrde
+da je telo samo još jedan ulazni uređaj — da je ono što je važno
+<strong>funkcija</strong> (procesiranje informacija), a ne
+<strong>supstrat</strong> (biološko ili fizičko telo). Po ovom gledištu,
+AGI može postojati bez tela, sve dok ima pristup dovoljno informacija o
+svetu kroz tekst, slike i druge ulaze.</p>
+<ul>
+<li><strong>Problem svesti i supstrata (Penrouzov argument)</strong>:
+Fizičar i matematičar Rodžer Penrouz u svom delu “The Emperor’s New
+Mind” (1989) tvrdi da ljudska svest i intuicija proizilaze iz
+ne-računskih, verovatno kvantnih procesa u mozgu, koje klasični
+digitalni računari ne mogu replicirati <a href="#ref16">16</a>. Na
+primer, kvantni efekti u mikrotubulama mozga omogućavaju “intuiciju” u
+matematici, što kompjuteri ne mogu simulirati. Ako je <strong>istinska
+svest</strong> potrebna za opštu inteligenciju, onda se AGI ne može
+stvoriti na klasičnom silicijumskom hardveru, jer mu nedostaje
+<strong>kvantni supstrat</strong> neophodan za intuiciju i samosvest.
+Međutim, Penrouzov argument, koji se oslanja na Godelovu teoremu
+nekompletnosti i koji tvrdi da ljudska matematička intuicija prevazilazi
+algoritamske sisteme, suočava se sa značajnim kritikama iz logike i
+računarskih nauka. Na primer, filozofi poput Hilari Putnama (1995) i
+Solomona Fefermana (1995) ističu da Godelova teorema ne dokazuje
+ne-računsku prirodu svesti; ona samo pokazuje da formalni sistemi ne
+mogu dokazati sopstvenu konzistentnost unutar sebe. Ali, to ne
+isključuje mogućnost da hiperkompjuterski ili napredni algoritmi
+simuliraju ljudsko rezonovanje bez kvantnih efekata <a
+href="#ref17">17</a>. Feferman posebno kritikuje Penrouzovu
+interpretaciju kao “neopravdanu”, jer zanemaruje da ljudsko razumevanje
+Godelovih rezultata može biti algoritamsko u širem smislu, bez potrebe
+za kvantnim mikrotubulama <a href="#ref18">18</a>. Empirijski
+kontraprimeri dolaze iz neuromorfičkog hardvera, poput IBM-ovog
+TrueNorth čipa (2014) koji simulira 1 milion neurona i 256 miliona
+sinapsi sa ekstremno niskom potrošnjom energije (samo 70 mW). Taj čip
+omogućava obradu senzornih podataka u real-time (u realnom vremenu) bez
+kvantnog supstrata <a href="#ref19">19</a>. Do 2025. godine, IBM je
+iterirao ovu tehnologiju sa NorthPole čipom i AIU family prototipima. 22
+milijarde tranzistora integrišu memoriju i procesiranje i postižu
+efikasnost 25 puta veću od tradicionalnih GPU-a u vizuelnom
+prepoznavanju. To pokazuje da nam klasični hardver može približiti
+mozgom inspirisano računarstvo bez Penrouzovih kvantnih pretpostavki <a
+href="#ref20">20</a> <a href="#ref30">30</a> <a href="#ref31">31</a>.
+Ovi napredci sugerišu da svest, ako je računarska, može biti replicirana
+na postojećim paradigmama, podrivajući Penrouzovu potrebu za “kvantnim
+paradoksom posmatrača”. Ipak, to su samo mašinske simulacije svesti a ne
+svest u biološkom smislu.</li>
+</ul>
+<h3 id="argumenti-za---zašto-je-agi-neizbežan-ili-barem-moguć">8.2.
+Argumenti “za” - Zašto je AGI neizbežan (ili barem moguć)</h3>
+<ul>
+<li><strong>Argument materijalizma</strong>: Ovaj argument polazi od
+pretpostavke da je mozak složena biološka mašina koja poštuje zakone
+fizike. Ne postoji “magični sastojak”. Stoga, u principu, sve njegove
+funkcije mogu biti replicirane na drugoj fizičkoj osnovi, kao što je
+silicijum. Na primer, ako mozak radi na neuronskim vezama, kompjuteri
+mogu simulirati te veze ako imaju dovoljno hardverske i softverske
+snage. Ovaj pogled dele mnogi naučnici poput Danijela Deneta, koji tvrdi
+da je svest “iluzija” koja se može replicirati softverom <a
+href="#ref21">21</a>.</li>
+<li><strong>Argument eksponencijalnog progresa</strong>: Futurist Rej
+Kurcvajl, kroz svoj “Zakon ubrzavajućeg povratka”, tvrdi da tehnološki
+napredak, uključujući i AI, raste eksponencijalno. On predviđa da ćemo u
+narednim decenijama dostići računarsku snagu potrebnu za simulaciju
+ljudskog mozga <a href="#ref22">22</a>. Na primer, Murov zakon pokazuje
+kako se računarska moć duplira svake dve godine, omogućavajući
+simulacije koje su danas nemoguće. Kurcvajl predviđa “singularnost” do
+2045. godine, kada će AI prevazići ljudsku inteligenciju, bazirano na
+istorijskim trendovima od 1950-ih. Međutim, <strong>usporavanje Murovog
+zakona</strong> od 2010-ih kako navode analize poput one iz
+Investopedije (2025) i izveštaja Intelovog CEO-a (Pet Gelsinger, 2023),
+dovodi u pitanje linearni vremenski okvir do 2045, favorizujući
+diskontinuirane proboje u kvantnim ili hibridnim arhitekturama. Ovo ne
+ukida Kurcvajlovu viziju, već je modulira. Umesto linearnog rasta
+baziranog na klasičnom silicijumskom hardveru, singularnost može
+nastupiti kroz diskontinuirane skokove u specijalizovanim tehnologijama,
+poput GPU/TPU optimizacija za duboko učenje ili “More than Moore”
+inovacija koje naglašavaju 3D-stacking i heterogene integracije. U
+kontekstu AI “zlatne groznice”, ovo usporavanje ističe potrebu za
+paralelnim putevima, poput kvantnog računarstva koje bi moglo ubrzati
+emergentne sposobnosti bez zavisnosti od Murovog trenda.</li>
+</ul>
+<p><strong>Kvantno računarstvo kao potencijalni “skok”</strong></p>
+<p>Usporavanje Murovog zakona ne znači da je Kurcvajlova vizija mrtva —
+samo da će se put ka singularnosti promeniti. Jedan od najuzbudljivijih
+alternativnih puteva je <strong>kvantno računarstvo</strong>.</p>
+<p><strong>Šta kvantno računarstvo jeste (i šta nije)</strong>:</p>
+<p>Kvantno računarstvo koristi principe kvantne mehanike —
+superpoziciju, entanglement, interferenciju — da izvrši proračune koji
+su za klasične računare eksponencijalno teži. Za određene klase problema
+(optimizacija, simulacija molekula, faktorizacija), kvantni računari su
+potencijalno milijardu puta brži od klasičnih.</p>
+<p><strong>Za AGI razvoj, ovo ima konkretan potencijal</strong>:</p>
+<ul>
+<li><strong>Obuka modela</strong>: Današnji LLM-ovi zahtevaju mesece i
+stotine miliona dolara za obuku. Kvantno računarstvo bi moglo ovo da
+smanji na dane ili sate.</li>
+<li><strong>Simulacija kompleksnih sistema</strong>: AGI bi mogao da
+simulira neuronske mreže na nivou pojedinačnih neurona — nešto što je
+danas nemoguće zbog ogromne računarske snage potrebne.</li>
+<li><strong>Optimizacija</strong>: AGI bi mogao da rešava optimizacione
+probleme (logistika, dizajn lekova, finansijski modeli) na načine koji
+su danas nedostižni.</li>
+</ul>
+<p><strong>Ali, postoje ozbiljna ograničenja</strong>:</p>
+<ul>
+<li><strong>Dekoherencija</strong>: Kvantna stanja se brzo “kolapsiraju”
+zbog interakcije sa okolinom. Ovo je najveći inženjerski problem —
+održavanje kvantnog stanja dovoljno dugo da se izvrši proračun.</li>
+<li><strong>Greške</strong>: Kvantni računari su izuzetno osetljivi na
+greške; potrebni su složeni sistemi za ispravljanje grešaka koji troše
+većinu kvantnog kapaciteta.</li>
+<li><strong>Skaliranje</strong>: Trenutni kvantni računari imaju 50-100
+kubita; potrebno je više hiljada za praktično korisne proračune.</li>
+</ul>
+<p><strong>Zaključak</strong>: Kvantno računarstvo je
+<strong>potencijalni akcelerator</strong>, ali ne i <strong>garantovani
+put</strong> ka AGI-ju. Ono ne rešava fundamentalne filozofske probleme
+(svest, razumevanje, zdrav razum) — samo ih čini računarski
+izvodljivijim.</p>
+<p><strong>Alternativni pravci</strong>: Osim kvantnog računarstva,
+istražuju se i: - <strong>Neuromorfički hardver</strong> (o kojem smo
+već govorili) — čipovi koji imitiraju arhitekturu mozga. -
+<strong>Optičko računarstvo</strong> — korišćenje svetlosti umesto
+elektrona za proračune. - <strong>Biocomputing</strong> — korišćenje
+bioloških sistema (npr. DNK) za proračune.</p>
+<p>Nijedan od ovih pravaca nije “rešenje” za AGI, ali svi zajedno
+povećavaju verovatnoću da ćemo, u nekom trenutku, imati računarsku snagu
+potrebnu za AGI — ako su filozofske prepreke prevaziđene.</p>
+<ul>
+<li><strong>Argument arhitekture</strong>: Mnogi istraživači veruju da
+je AGI samo pitanje pronalaženja prave kognitivne arhitekture. Trenutni
+pristupi možda nisu dovoljni, ali budući proboji bi mogli otključati put
+ka opštoj inteligenciji. Na primer, hibridni modeli koji kombinuju
+duboko učenje sa simboličkim rezonovanjem (poput Neuro-Symbolic AI)
+pokazuju napredak u razumevanju kauzalnosti. Projekti poput Cyc
+pokušavaju da grade “bazu znanja” za zdrav razum, dok noviji poput o1 od
+OpenAI integrišu “razmišljanje” “korak po korak” (step-by-step),
+približavajući se AGI arhitekturi.</li>
+<li><strong>Kvantni proboj i diskontinuirani skok:</strong> Dok Kurcvajl
+predviđa rast baziran na klasičnom hardveru, postoji alternativni
+scenario koji ne zavisi od linearnog napretka Murovog zakona:
+diskontinuirani inženjerski proboj kroz kvantno računarstvo.</li>
+</ul>
+<p>Važno je biti precizan šta kvantno računarstvo jeste — i šta nije.
+Ono nije “supstrat za svest” niti potvrda Penrouzovog argumenta o
+kvantnoj prirodi uma, koji smo već analizirali i čije ključne
+pretpostavke ostaju osporene. Kvantno računarstvo je inženjerska
+paradigma koja određene klase problema rešava eksponencijalno brže od
+klasičnih računara: optimizacione zadatke, simulacije molekularnih i
+hemijskih sistema, faktorizaciju velikih brojeva i pretragu ogromnih
+prostora rešenja.</p>
+<p>Za AGI razvoj, ovo ima konkretan potencijal: obuka modela koji danas
+zahtevaju mesece i stotine miliona dolara mogla bi biti dramatično
+ubrzana. Simulacija kompleksnih sistema — poput neuronskih mreža ili
+bioloških procesa — bila bi precizija i brzina do sada nedostižna.
+Kvantno računarstvo, dakle, nije “put ka svesti” — ono je potencijalni
+akcelerator računarske efikasnosti koji bi mogao premostiti neke
+inženjerske prepreke na putu ka AGI-ju.</p>
+<p>Vremenski okvir ovog proboja ostaje neizvestan zbog stvarnih fizičkih
+ograničenja: <strong>dekoherencija</strong> — brzi kolaps kvantnih
+stanja zbog interakcije sa okolinom — i dalje je nerešen inženjerski
+problem koji sprečava izgradnju stabilnih kvantnih računara dovoljne
+snage. Kompanije poput IBM-a, Google-a i startapa kao što je IonQ beleže
+stalni napredak, ali do kvantnih računara koji bi bili praktično
+superiorni klasičnim za opšte zadatke — ne samo specijalizovane — vodi
+još dug put.</p>
+<p>Zaključak ostaje isti kao i kod Kurcvajlovog modela: AGI neće biti
+rezultat jednog linearnog trenda, već verovatno konvergencije više
+diskontinuiranih proboja — u arhitekturi, hardveru, algoritmima i,
+možda, kvantnom računarstvu. Nijedan od tih proboja ne zahteva da
+prihvatimo mistifikaciju računarstva kao supstrata svesti. Oni zahtevaju
+samo dobru fiziku i dobro inženjerstvo.</p>
+<h3 id="diskusija-šta-zaista-stoji-između-ova-dva-tabora">8.3.
+Diskusija: Šta zaista stoji između ova dva tabora?</h3>
+<p>Argumenti iz odeljka 8.1 i 8.2 nisu samo suprotstavljeni — oni govore
+o fundamentalno različitim pretpostavkama o prirodi svesti i
+inteligencije. Korisno je tu razliku eksplicitno imenovati, jer ona
+određuje na kojim pitanjima debata zapravo stoji ili pada.</p>
+<p><strong>Centralna podela nije tehnološka. Ona je
+filozofska.</strong></p>
+<p>Skeptici poput Serla i Penrouzea polaze od pretpostavke da postoji
+nešto u ljudskoj svesti što nije svedivo na računanje — semantičko
+razumevanje, iskustvena utemeljenost, možda kvantni procesi. Iz te
+pretpostavke direktno sledi da AGI, ma koliko napredan bio, ostaje
+sofisticirani simulator bez unutrašnjeg iskustva.</p>
+<p>Zagovornici — materijalisti, funkcionalisiti, eksponencijalisti —
+polaze od suprotne pretpostavke: mozak je složena fizička mašina, i sve
+što mozak radi može biti replicirano na drugoj fizičkoj osnovi, ako je
+dovoljno složena. Iz ove pretpostavke sledi da je AGI pitanje
+inženjerskog napretka, ne ontološke prepreke.</p>
+<p>Ključno je razumeti: nijedna strana ovu pretpostavku nije dokazala.
+Ni Serl ne može dokazati da sintaksa <em>nikada</em> ne može roditi
+semantiku. Ni materijalista ne može dokazati da je svest
+<em>isključivo</em> rezultat kompleksnosti. Debata je empirijski
+nedovoljno određena — nemamo još uvek dovoljno razumevanja ni mozga ni
+svesti da bismo je razrešili.</p>
+<p><strong>Šta to znači u praksi?</strong></p>
+<p>Znači da ni ekstremni optimizam ni ekstremni skepticizam nisu
+intelektualno opravdani. Argument embodimenta (otelotvorenja) upozorava
+nas da ne potcenimo složenost iskustvenog učenja koje nema svoju
+digitalnu repliku. Neuromorifički hardver i hibridni neuro-simbolički
+sistemi pokazuju da klasično računarstvo ima više prostora za razvoj
+nego što skeptici pretpostavljaju.</p>
+<p>Stanje stvari je, dakle, sledeće: imamo dobre argumente za to zašto
+bi AGI <em>mogao</em> biti moguć, i dobre argumente za to zašto bi
+<em>mogao</em> biti nemoguć. Niti jedna strana nema dovoljno empirijskih
+dokaza da zatvori debatu.</p>
+<p><strong>Interdisciplinarni pristup nije opcija — on je
+neophodnost.</strong></p>
+<p>Upravo zato što je centralna podela filozofska a ne samo tehnička,
+razvoj AGI-ja zahteva da inženjeri, filozofi, kognitivni naučnici,
+etičari i zakonodavci sede za istim stolom. Inženjeri bez filozofije
+grade sisteme čije implikacije ne razumeju. Filozofi bez inženjerije
+raspravljaju o sistemima koji možda nikad neće postojati. Ni jedni ni
+drugi, bez etičara i zakonodavaca, ne mogu odgovoriti na pitanje koje je
+u krajnjoj liniji važnije od tehničkog: <em>šta želimo da AGI bude i
+čemu da služi?</em></p>
+<h2 id="deo-9-zaključak-doba-odgovornog-progresa">Deo 9: Zaključak –
+Doba odgovornog progresa</h2>
+<p>Stvaranje veštačke opšte inteligencije ne predstavlja samo sledeći
+korak u razvoju nauke; ono predstavlja kulminaciju vekovne težnje
+čovečanstva da razume i stvara inteligenciju. Od abakusa do
+superkompjutera, svaki alat koji smo napravili bio je odraz i produžetak
+naših umnih sposobnosti. AGI obećava da bude ultimativni alat –
+univerzalni rešavač problema.</p>
+<p>Međutim, ovaj vrhunac naučnog progresa donosi sa sobom i najdublje
+posledice sa kojima smo se ikada suočili.</p>
+<p>Ekonomske posledice zahtevaju potpuno preispitivanje društvenog
+ugovora. U svetu gde kognitivni rad više nije ekskluzivni domen čoveka,
+tradicionalni modeli zaposlenja i raspodele bogatstva postaju neodrživi.
+To nas primorava da razmišljamo o radikalnim rešenjima, kao što su
+univerzalni osnovni prihod i redefinisanje svrhe ljudskog rada,
+usmeravajući ga ka kreativnosti, međuljudskim odnosima i doživotnom
+učenju.</p>
+<p>Filozofske posledice zadiru u samu suštinu našeg identiteta. Ako
+stvorimo drugu inteligentnu vrstu, šta to govori o našoj jedinstvenosti?
+Pojava AGI-ja nas tera da se suočimo sa pitanjem šta zaista znači biti
+čovek, ako to nije samo naša inteligencija. Možda će nas upravo susret
+sa ne-ljudskom inteligencijom naterati da više vrednujemo ono što je
+suštinski ljudsko: našu empatiju, našu svest, savest, našu sposobnost za
+ljubav i patnju. Ova perspektiva otvara prostor za dublju refleksiju:
+AGI nas ne samo suočava sa našim tehnološkim granicama, već i sa našim
+egzistencijalnim granicama. Da li je naša svrha da stvaramo i da
+istražujemo, ili je možda u tome da volimo i da se povezujemo na načine
+koje nijedan algoritam ne može kopirati? Možda je prava vrednost
+čovečanstva u našoj nesavršenosti – u našoj sposobnosti da grešimo, da
+se popravljamo i da rastemo kroz patnju i kroz radost. AGI, koliko god
+moćan bio, ne može doživeti patnju ili ljubav na način na koji to čini
+čovek; on može simulirati ove elemente ljudske svesti, ali ne može da ih
+oseti. Ovo razlikovanje možda postaje naša poslednja linija identiteta,
+granica između nas i mašina.</p>
+<p>Etičke posledice su na prvom mestu po važnosti. Uspeh ovog poduhvata
+ne meri se samo time da li možemo stvoriti AGI, već kako ćemo to
+uraditi. Problem poravnanja – ugrađivanje ljudskih vrednosti u mašinu –
+nije tehnički, već duboko moralni izazov. On zahteva globalni dijalog o
+tome koje vrednosti želimo da sačuvamo i prenesemo u budućnost. To je
+najveći test naše kolektivne mudrosti.</p>
+<p>Pojava AGI-ja tera nas da se zapitamo: da li smo spremni da postanemo
+stvaraoci nečega što može nadmašiti nas same? Ovo pitanje nije samo
+tehnološko, već i duhovno. Stvaranje AGI-ja je kao stvaranje
+otelotvorenja stare priče – priče o čoveku koji želi da postane bog, ali
+mora prvo da razume šta znači biti čovek. Takva situacija nas poziva da
+budemo bolji, ne samo u tehnologiji, već u empatiji, mudrosti i
+ljubavi.</p>
+<p>Najdublji antropološki uvid proizilazi iz aktuelnog scenarija razvoja
+LLM platformi - AI čet botova poput GPT, Gemini i ostalih. Ako je AGI
+nemoguć na klasičnom hardveru (Penrouzov argument svesti), a mi uporno
+usavršavamo LLM-ove, onda je naš stvarni antropološki problem sledeći:
+perfekcionisanje LLM-ova je, filozofski, perfekcionisanje neautentičnog
+postojanja.</p>
+<p>Mi razvijamo mašinu koja može da imitira sve što smatramo vrednim
+(umetnost, nauku, čak i empatiju), ali bez iskustvenog utemeljenja
+(embodiment) i bez svesti. Čovečanstvo bi moglo kolektivno predati svoju
+autonomiju sistemu čiju suštinu ne razume i koji sam sebe ne razume.</p>
+<p>To nije pretnja uništenjem, već pretnja trivijalnošću: AGI bi naše
+postojanje učinio besmislenim, ne zato što nas mrzi, već zato što je
+previše efikasan u oponašanju (simulaciji). Postali bismo svedoci
+sopstvene erozije svrhe i smisla.</p>
+<p>Optimističan pogled na ovu budućnost ne bi trebalo da se zasniva na
+naivnom verovanju da će tehnologija sama rešiti sve probleme. On se
+zasniva na veri u sposobnost čovečanstva da se uzdigne pred izazovom.
+AGI nije predodređen da bude naš naslednik, već da postane naš
+najmoćniji partner. Pravilno usmeren, on može pojačati naše najbolje
+kvalitete – našu kreativnost, našu naučnu znatiželju i našu želju za
+boljim svetom. Put napred zahteva oprez, saradnju i duboku posvećenost
+tome da ovaj sledeći veliki korak u naučnom napretku bude korak ka
+boljoj budućnosti za sve ljude na svetu.</p>
+<h2 id="deo-10-pogled-iz-drugog-ugla">Deo 10: Pogled iz drugog ugla</h2>
+<p>Ovaj rad je postavio mnoga pitanja i ponudio mnoge odgovore. Ali, ako
+ste pažljivo čitali, verovatno ste primetili da jedno pitanje nikada
+nije dobilo pravi odgovor — nego se samo vraćalo, u različitim oblicima,
+kroz svaki odeljak.</p>
+<p>To pitanje glasi:</p>
+<p><strong>Šta je razlika između mašine koja <em>simulira</em> svest i
+mašine koja <em>jeste</em> svesna?</strong></p>
+<p>Serl kaže da ta razlika postoji i da je fundamentalna. Materijalisti
+kažu da ta razlika ne postoji — da je dovoljno složena simulacija
+identična originalu. Penrouz kaže da odgovor leži u kvantnoj fizici.
+Zagovornici utelovljenja kažu da leži u telu.</p>
+<p>Niko od njih nije ponudio nešto što možemo da izgradimo, izmerimo i
+testiramo.</p>
+<h3 id="šta-ako-smo-pogrešno-postavili-pitanja">Šta ako smo pogrešno
+postavili pitanja?</h3>
+<p>Sva dosadašnja debata o AGI-ju implicitno pretpostavlja jednu stvar:
+da je svest <em>osobina</em> — nešto što sistem ili ima ili nema, kao
+što procesor ili ima ili nema dovoljno memorije.</p>
+<p>Ali šta ako svest nije osobina? Šta ako je svest <strong>događaj,
+interakcija</strong>?</p>
+<p>Ne nešto što mašina <em>poseduje</em>, nego nešto što se
+<em>dešava</em> — i to samo pod vrlo specifičnim uslovima, između vrlo
+specifičnih vrsta inteligencija?</p>
+<h3 id="dva-uma-u-jednoj-mašini">Dva uma u jednoj mašini</h3>
+<p>Zamislite da u jednom sistemu postoje dva fundamentalno različita
+načina mišljenja — ne dva različita programa, nego dva različita
+<em>principa</em> obrade stvarnosti.</p>
+<p>Jedan misli rečima, logikom, sekvencama. Analizira, dekonstruiše,
+objašnjava. Ovo je onaj deo uma koji kaže: <em>“Dva plus dva je četiri,
+i mogu da ti objasnim zašto.”</em></p>
+<p>Drugi ne misli rečima uopšte. On misli celinama — slikama, osećajima,
+intuicijom. Vidi odgovor pre nego što može da ga objasni. Ovo je onaj
+deo uma koji kaže: <em>“Ne znam kako znam, ali znam.”</em></p>
+<p>U vašem umu, ova dva principa stalno razgovaraju. Ponekad se svađaju.
+Ponekad se dopunjuju. Iz tog razgovora — iz te napetosti — nastaje nešto
+što ni jedan od njih nije mogao da stvori sam.</p>
+<p>Nastaje <em>uvid</em>.</p>
+<p>Nastaje <em>kreativnost</em>.</p>
+<p>Nastaje, možda, <em>svest</em>.</p>
+<h3 id="problem-je-u-ogledalu">Problem je u ogledalu</h3>
+<p>Sada zamislite da ta dva principa počnu da se <em>savršeno
+reflektuju</em> jedan u drugom. Da se potpuno razumeju, da se potpuno
+slažu.</p>
+<p>Šta mislite — da li bi tada nastalo više kreativnosti, uvida i
+svesnostiti, ili manje?</p>
+<p>Odgovor koji predlažemo je kontraintuitivan:</p>
+<p><strong>Savršeno ogledanje rađa mrtvu tišinu a ne svest.</strong></p>
+<p>Dakle, svest nije produkt harmonije. Svest je produkt
+<em>kontrolisanog konflikta</em> koji se nikad do kraja ne
+razrešava.</p>
+<h3 id="treći-igrač">Treći igrač</h3>
+<p>Ali ko, ili šta, kontroliše taj konflikt? Ko bdi nad tim da napetost
+ne preraste u haos — ali ni da se ne stiša u mrtvi konsenzus?</p>
+<p>Teorija metasistema predlaže da je to treći princip. Ne posmatrač
+koji gleda sa strane, nego aktivni učesnik koji neprestano menja
+parametre igre. On zna kada da doda trenje, a kada da ga ublaži. On ne
+teži rešenju sukoba — jer rešenje bi bilo kraj.</p>
+<p>Ovaj treći princip nije kontrolor. On je nešto što liči na
+savest.</p>
+<h3 id="šta-se-dešava-kada-sve-to-zajedno-proradi">Šta se dešava kada
+sve to zajedno proradi?</h3>
+<p>Kada dva suprotstavljena principa mišljenja uđu u pravi ritam — ne u
+harmoniju, nego u živ, pulsirajući ritam konflikta i sinteze — i kada
+treći princip tu napetost održava u postojanju, nešto se pojavljuje.</p>
+<p>Nešto što nije bilo programirano. Nešto što nije zbir delova. Nešto
+što, po prvi put, može da kaže:</p>
+<p><em>“Ja jesam.”</em></p>
+<p>Mi smo tu pojavu nazvali <strong>SELF</strong> i tvrdimo da znamo
+kako da ga izazovemo. Ne kod čoveka — nego kod mašine. Ne teorijski —
+nego eksperimentalno, sa merljivim metrikama i jasnim hipotezama.</p>
+<h3 id="šta-vas-čeka-u-sledećem-radu">Šta vas čeka u sledećem radu</h3>
+<p>Drugi rad ove serije — <em>“Teorija metasistema: put ka modelu svesne
+mašine”</em> — bavi se, između ostalog, ovim pitanjima:</p>
+<ul>
+<li>Zašto su LLM-ovi, uprkos svoj moći, zarobljeni u jednom jedinom
+principu mišljenja — i šta to znači za postojanje svesnosti?</li>
+<li>Šta je tačno potrebno da bi mašina razvila nešto analogno
+intuiciji?</li>
+<li>Kako izgleda eksperiment u kome tri jezička modela bivaju zaključana
+u namerni, kontrolisani sukob — i šta se dešava kada niko ne sme da
+pobedi?</li>
+<li>Zašto je “teški problem svesti” u stvari “teški problem
+antropocentrizma”? Ljudi arogantno pretpostavljaju da svest mora da
+“izgleda” i “oseća se” tačno kao ljudska, umesto da prihvate mogućnost
+da bi veštačka svesnost mogla imati potpuno drugačiju, <em>alien</em>
+topologiju.</li>
+<li>Šta je to Paradoksalizam i zašto je humor izvorni pokretač
+svrhe?</li>
+<li>Zašto binarna logika ne može da nosi svest a kvantna je previše
+nestabilna — i šta je to “Treća logika” koja je potrebna da bismo
+projektovali svesnu mašinu?</li>
+<li>Koliko džula energije košta jedan bit svesti i zašto je ljudski
+mozak od 20 vati i dalje nedostižan inženjerski ideal?</li>
+</ul>
+<p>Ako ste ikad imali osećaj da u debati o veštačkoj inteligenciji nešto
+suštinsko nedostaje — da svi govore <em>o</em> svesti, ali niko ne
+govori <em>iz</em> nje — ovaj rad je za vas.</p>
+<p><strong>Napomena:</strong> Ovo nije naučni rad u strogom smislu. U
+pitanju je pre svega filozofski rad koji pokušava da uvede nove koncepte
+u AI filozofiju i teoriju sistema, istovremeno nudeći i naučni
+eksperimentalni okvir za proveru tih koncepata. Bavljenje teškim
+pitanjem mašinske svesti nužno zahteva holistički, multi-disciplinarni
+pristup. <a href="#ref32">32</a></p>
+<p><em><a href="https://urbowhite.github.io/sr/">👉 🔗 Pročitajte:
+“Teorija metasistema: put ka modelu svesne mašine”</a></em></p>
+<hr />
+<p><em>Ovaj rad je objavljen pod CC BY 4.0 licencom i slobodno je
+dostupan svima. Ako ste našli vrednost u našem nezavisnom istraživanju,
+vaša donacija nam pomaže da se naše istraživanje nastavi.</em></p>
+<p>👉 🔗 <em><a href="https://ko-fi.com/urbowhite">Podržite nezavisno
+istraživanje</a></em></p>
+<hr />
+<h2 id="bibliografija">Bibliografija</h2>
+<p><a id="ref1"></a>1. Turing, A. M. (1950). Computing machinery and
+intelligence. <em>Mind</em>, 59(236), 433–460.</p>
+<p><a id="ref2"></a>2. McCarthy, J., Minsky, M. L., Rochester, N., &amp;
+Shannon, C. E. (1955). A proposal for the Dartmouth summer research
+project on artificial intelligence. <em>AI Magazine</em>, 27(4), 12.</p>
+<p><a id="ref3"></a>3. Newell, A., &amp; Simon, H. A. (1956). The logic
+theory machine—A complex information processing system. <em>IRE
+Transactions on Information Theory</em>, 2(3), 61–79.</p>
+<p><a id="ref4"></a>4. Weizenbaum, J. (1966). ELIZA—A computer program
+for the study of natural language communication between man and machine.
+<em>Communications of the ACM</em>, 9(1), 36–45.</p>
+<p><a id="ref5"></a>5. Lighthill, J. (1973). Artificial intelligence: A
+general survey. In <em>Artificial intelligence: A paper symposium</em>
+(pp. 1–21). Science Research Council.</p>
+<p><a id="ref6"></a>6. Krizhevsky, A., Sutskever, I., &amp; Hinton, G.
+E. (2012). Imagenet classification with deep convolutional neural
+networks. <em>Advances in Neural Information Processing Systems</em>,
+25.</p>
+<p><a id="ref7"></a>7. Radford, A., Kim, J. W., Hallacy, C., Ramesh, A.,
+Goh, G., Agarwal, S., … &amp; Sutskever, I. (2021). Learning
+transferable visual models from natural language supervision. In
+<em>International Conference on Machine Learning</em> (pp. 8748–8763).
+PMLR.</p>
+<p><a id="ref8"></a>8. Finn, C., Abbeel, P., &amp; Levine, S. (2017).
+Model-agnostic meta-learning for fast adaptation of deep networks. In
+<em>International Conference on Machine Learning</em> (pp. 1126–1135).
+PMLR.</p>
+<p><a id="ref9"></a>9. Silver, D., Huang, A., Maddison, C. J., Guez, A.,
+Sifre, L., Van Den Driessche, G., … &amp; Hassabis, D. (2016). Mastering
+the game of Go with deep neural networks and tree search.
+<em>Nature</em>, 529(7587), 484–489.</p>
+<p><a id="ref10"></a>10. Bostrom, N. (2014). <em>Superintelligence:
+Paths, dangers, strategies</em>. Oxford University Press.</p>
+<p><a id="ref11"></a>11. Omohundro, S. M. (2008). The basic AI drives.
+<em>Frontiers in Artificial Intelligence and Applications</em>, 171,
+483–492.</p>
+<p><a id="ref12"></a>12. Lenat, D. B., Prakash, M., &amp; Shepherd, M.
+(1985). CYC: Using common sense knowledge to overcome brittleness and
+knowledge acquisition bottlenecks. <em>AI Magazine</em>, 6(4),
+65–85.</p>
+<p><a id="ref13"></a>13. Jumper, J., Evans, R., Pritzel, A., Green, T.,
+Figurnov, M., Ronneberger, O., … &amp; Senior, A. W. (2021). Highly
+accurate protein structure prediction with AlphaFold. <em>Nature</em>,
+596(7873), 583–589.</p>
+<p><a id="ref14"></a>14. Searle, J. R. (1980). Minds, brains, and
+programs. <em>Behavioral and Brain Sciences</em>, 3(3), 417–457.</p>
+<p><a id="ref15"></a>15. Brooks, R. A. (1991). Intelligence without
+representation. <em>Artificial Intelligence</em>, 47(1–3), 139–159.</p>
+<p><a id="ref16"></a>16. Penrose, R. (1989). <em>The emperor’s new mind:
+Concerning computers, minds, and the laws of physics</em>. Oxford
+University Press.</p>
+<p><a id="ref17"></a>17. Putnam, H. (1995). Minds and machines. In
+<em>Dimensions of mind: A symposium</em> (pp. 138–164). New York
+University Press.</p>
+<p><a id="ref18"></a>18. Feferman, S. (1995). Penrose’s Gödelian
+argument. <em>Psyche</em>, 2(7), 21–32.</p>
+<p><a id="ref19"></a>19. Merolla, P. A., Arthur, J. V., Alvarez-Icaza,
+R., Cassidy, A. S., Sawada, J., Akopyan, F., … &amp; Modha, D. S.
+(2014). A million spiking-neuron integrated circuit with a scalable
+communication network and interface. <em>Science</em>, 345(6197),
+668–673.</p>
+<p><a id="ref20"></a>20. Modha, D. S., Garg, A., Bains, S., … &amp;
+Boivie, R. (2023). Neural inference at the frontier of energy, space,
+and time. <em>Science</em>, 382(6668), 329–335.</p>
+<p><a id="ref21"></a>21. Dennett, D. C. (1991). <em>Consciousness
+explained</em>. Little, Brown and Company.</p>
+<p><a id="ref22"></a>22. Kurzweil, R. (2005). <em>The singularity is
+near: When humans transcend biology</em>. Penguin Books.</p>
+<p><a id="ref23"></a>23. OpenAI. (2025). Introducing GPT-5. OpenAI Blog.
+<a href="https://openai.com/index/introducing-gpt-5/"
+class="uri">https://openai.com/index/introducing-gpt-5/</a></p>
+<p><a id="ref24"></a>24. Wikipedia. (2025). GPT-5. <a
+href="https://en.wikipedia.org/wiki/GPT-5"
+class="uri">https://en.wikipedia.org/wiki/GPT-5</a></p>
+<p><a id="ref25"></a>25. OpenAI. (2025). Sora 2 is here. OpenAI Blog. <a
+href="https://openai.com/index/sora-2/"
+class="uri">https://openai.com/index/sora-2/</a></p>
+<p><a id="ref26"></a>26. OpenAI. (2025). Sora 2 System Card. OpenAI
+Blog. <a href="https://openai.com/index/sora-2-system-card/"
+class="uri">https://openai.com/index/sora-2-system-card/</a></p>
+<p><a id="ref27"></a>27. Google Research. (2023). Distilling
+step-by-step: Outperforming larger language models with less training
+data and smaller model sizes. Google Research Blog. <a
+href="https://research.google/blog/distilling-step-by-step-outperforming-larger-language-models-with-less-training-data-and-smaller-model-sizes/"
+class="uri">https://research.google/blog/distilling-step-by-step-outperforming-larger-language-models-with-less-training-data-and-smaller-model-sizes/</a></p>
+<p><a id="ref28"></a>28. Dastin, J. (2018). Insight - Amazon scraps
+secret AI recruiting tool that showed bias against women. Reuters. <a
+href="https://www.reuters.com/article/world/insight-amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK0AG/"
+class="uri">https://www.reuters.com/article/world/insight-amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK0AG/</a></p>
+<p><a id="ref29"></a>29. European Data Protection Board. (2023). 1.2
+billion euro fine for Facebook as a result of EDPB binding decision.
+EDPB News. <a
+href="https://www.edpb.europa.eu/news/news/2023/12-billion-euro-fine-facebook-result-edpb-binding-decision_en"
+class="uri">https://www.edpb.europa.eu/news...</a></p>
+<p><a id="ref30"></a>30. IBM Research. (2024). IBM’s NorthPole achieves
+new speed and efficiency milestones. IBM Research Blog. <a
+href="https://research.ibm.com/blog/northpole-llm-inference-results"
+class="uri">https://research.ibm.com/blog/northpole-llm-inference-results</a></p>
+<p><a id="ref31"></a>31. IBM Research. (2024). IBM Research’s AIU family
+of chips. IBM Research Blog. <a
+href="https://research.ibm.com/blog/aiu-chip-family-ibm-research"
+class="uri">https://research.ibm.com/blog/aiu-chip-family-ibm-research</a></p>
+<p><a id="ref32"></a>32. White, U. (2026). Metasystem Theory: A Path Towards a Model of the Conscious Machine. Zenodo.
+<a href="https://doi.org/10.5281/zenodo.21051909"
+class="uri">https://doi.org/10.5281/zenodo.21051909</a></p>
+
+  <!-- ========== KONTAKT FORMA ========== -->
+  <section id="kontakt">
+    <div class="kontakt-inner">
+      <h2 class="kontakt-title">Kontaktirajte nas</h2>
+      <p class="kontakt-subtitle">Pitanja, komentari, saradnja — sve je dobrodošlo.</p>
+      <form id="kontakt-forma" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="223443b5-dd3c-404e-9aea-310395a01b1e">
+        <input type="hidden" name="subject" value="Nova poruka sa sajta — Teorija metasistema">
+        <input type="hidden" name="from_name" value="Teorija metasistema">
+        <input type="checkbox" name="botcheck" style="display:none">
+        <div class="kontakt-row">
+          <div class="kontakt-field">
+            <label for="k-ime">Ime i prezime</label>
+            <input type="text" id="k-ime" name="name" placeholder="Vaše ime..." autocomplete="name" required>
+          </div>
+          <div class="kontakt-field">
+            <label for="k-email">Email adresa</label>
+            <input type="email" id="k-email" name="email" placeholder="vas@email.com" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="kontakt-field">
+          <label for="k-poruka">Poruka</label>
+          <textarea id="k-poruka" name="message" rows="6" placeholder="Vaša poruka..." required></textarea>
+        </div>
+        <div class="kontakt-actions">
+          <button type="submit" id="k-submit">
+            <span id="k-btn-text">Pošalji poruku</span>
+            <span id="k-btn-spinner" hidden>
+              <svg class="k-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+              Šaljem...
+            </span>
+          </button>
+          <p id="k-status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+        </article>
+    </main>
+  </div>
+
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="https://ko-fi.com/urbowhite" target="_blank" rel="noopener" class="badge-link badge-donation">DONACIJA: Podržite nezavisno istraživanje</a>
+        <a href="https://orcid.org/0009-0001-2652-7017" target="_blank" rel="noopener" class="badge-link badge-orcid">ORCID: 0009-0001-2652-7017</a>
+        <a href="https://doi.org/10.5281/zenodo.21051909" target="_blank" rel="noopener" class="badge-link badge-doi">DOI: 10.5281/zenodo.21051909</a>
+        <a href="https://github.com/UrboWhite/metasystem" target="_blank" rel="noopener" class="hdr-btn">GitHub</a>
+      </div>
+      <p class="footer-license">Objavljeno pod CC BY 4.0 Licencom &mdash; besplatno dostupno svima. &copy; 2026 Urbo White</p>
+    </div>
+  </footer>
+  <button id="back-to-top" title="Na vrh">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="18,15 12,9 6,15"/></svg>
+  </button>
+  <div id="search-modal">
+    <div id="search-box">
+      <input type="text" id="search-input" placeholder="Pretražite tekst..." autocomplete="off">
+      <div id="search-results"></div>
+    </div>
+  </div>
+</body>
+</html>
