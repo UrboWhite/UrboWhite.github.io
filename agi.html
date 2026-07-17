@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artificial General Intelligence (AGI): From History to the Future. Author: Urbo White. 2026.">
+  <meta name="author" content="Urbo White">
+  <title>AGI Evolution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23e6c587'>⊕</text></svg>" />
+<script src="meta.js" defer></script>
+</head>
+<body>
+  <div id="progress-bar"></div>
+
+  <header id="site-header">
+    <div class="header-left">
+      
+      <button id="hamburger" aria-label="Menu">
+  <svg id="icon-hamburger" viewBox="0 0 24 24" fill="none" stroke="#ddd8cc" stroke-width="2" stroke-linecap="round" width="22" height="22">
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <line x1="3" y1="12" x2="21" y2="12"/>
+    <line x1="3" y1="18" x2="21" y2="18"/>
+  </svg>
+</button>
+      <span class="header-title">AGI Evolution</span>
+    </div>
+    <div class="header-right">
+      <a href="https://orcid.org/0009-0001-2652-7017" target="_blank" rel="noopener" class="badge-link badge-orcid" title="ORCID profile">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
+        <span class="btn-text">ORCID</span>
+      </a>
+      <a href="https://doi.org/10.5281/zenodo.21051909" target="_blank" rel="noopener" class="badge-link badge-doi" title="DOI — Zenodo">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        <span class="btn-text">DOI</span>
+      </a>
+      <a href="https://urbowhite.github.io/agi.html" class="hdr-btn" title="Srpska verzija">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span class="btn-text">SRB</span>
+      </a>
+      <button id="search-btn" class="hdr-btn" title="Search (Ctrl+K)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span class="btn-text">Search</span>
+      </button>
+      <button class="hdr-btn" title="Contact form" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <span class="btn-text">Contact</span>
+</button>
+      <button id="pdf-btn" class="hdr-btn hdr-btn-accent" title="Print / PDF">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span class="btn-text">Download PDF</span>
+      </button>
+      <button id="theme-btn" class="hdr-btn hdr-btn-icon" title="Light / dark theme">
+        <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="sidebar-overlay"></div>
+  <div id="layout">
+    <aside id="sidebar">
+      <nav id="sidebar-nav">
+        <div class="nav-header">Contents</div>
+        <ul class="nav-list" id="dynamic-nav-list">
+          <!-- Dynamic navigation here -->
+        </ul>
+      </nav>
+    </aside>
+    <main id="main-content">
+      <article id="content-body">
+        
+<h1 id="artificial-general-intelligence-agi-from-history-to-the-future">Artificial
+General Intelligence (AGI): From History to the Future</h1>
+<p>Author: Urbo White</p>
+<p><a href="https://orcid.org/0009-0001-2652-7017">👉 ORCID:
+0009-0001-2652-7017</a></p>
+<img src="agi.jpg" alt="AGI" />
+<h2
+id="part-1-introduction-to-the-world-of-artificial-intelligence-the-path-from-the-abacus-to-the-algorithm">Part
+1: Introduction to the world of artificial intelligence – The path from
+the abacus to the algorithm</h2>
+<p>This paper was written because the current knowledge about AI
+challenges is at a very low level among most people. This can be
+dangerous because AI is entering all areas of human life at a terrifying
+speed. Therefore, popularization and education are needed to enter a
+deeper understanding of this fascinating phenomenon.</p>
+<h3 id="what-in-essence-is-artificial-intelligence">1.1. What, in
+essence, is artificial intelligence?</h3>
+<p>Artificial intelligence (AI) is a branch of computer science focused
+on creating systems capable of performing tasks that are usually
+associated with human intelligence. Simply put, humans are trying to
+create a machine that would exhibit traits of human consciousness. This
+encompasses a wide range of cognitive abilities: learning from
+experience, pattern recognition, understanding natural language,
+problem-solving, and decision-making. In essence, AI represents
+humanity’s attempt to understand and shape the mechanisms of
+intelligence and ultimately copy them into non-living matter.</p>
+<p>Today’s artificial intelligence can be compared to a smart home
+assistant: it can turn on lights, adjust the temperature, or recognize
+voice, but only if it is programmed to do so. Similarly, a refrigerator
+that knows when milk is almost gone and reminds us to buy it cannot go
+to the store itself nor do anything other than a few tasks related to
+controlling its operation, checking its contents, and sending
+notifications to the owner.</p>
+<h3
+id="a-brief-history-from-thought-experiments-to-the-data-revolution">1.2.
+A brief history: From thought experiments to the data revolution</h3>
+<p>The idea of artificially intelligent beings is as old as storytelling
+– from the Golem of Prague to Frankenstein’s monster. But the real
+scientific foundation for AI arrives with logicians like George Boole,
+who showed that logic can be reduced to mathematics. The history of AI
+is a story of times of great breakthroughs and periods of stagnation,
+known as “AI winters.”</p>
+<ul>
+<li><p><strong>Origin and birth (1950s)</strong>: The modern era of AI
+begins with the work of Alan Turing, who in 1950 posed the fundamental
+question: <strong>“Can machines think?”</strong> and proposed the famous
+Turing Test <a href="#ref1">1</a>. Just six years later, at the
+Dartmouth Conference in 1956, the term “artificial intelligence” was
+officially coined <a href="#ref2">2</a>. The first programs, such as
+Newell and Simon’s <em>“Logic Theorist”</em>, were already able to prove
+mathematical theorems, sparking enormous optimism <a
+href="#ref3">3</a>.</p></li>
+<li><p><strong>Early rises and “AI winters”</strong>: During the 1960s,
+programs like ELIZA were developed, an early chatbot that simulated a
+psychotherapist and often succeeded in tricking users into believing
+they were talking to a real person, demonstrating the power of
+simulating understanding <a href="#ref4">4</a>. However, overly grand
+promises and limited computing power led to disappointment and reduced
+funding, pushing this field of computer science into the first “AI
+winter” in the 1970s, to which the Lighthill Report of 1973
+significantly contributed <a href="#ref5">5</a>. A single modern
+smartphone has more processing power than all the computers that existed
+in 1965.</p></li>
+<li><p><strong>What was symbolic AI and why did it
+fail?</strong></p></li>
+</ul>
+<p>Before today’s dominance of deep learning (computational neural
+networks), most AI systems were based on the <strong>symbolic
+approach</strong> — the idea that intelligence can be achieved through
+formal manipulation of symbols according to strictly defined rules.
+These systems were called “expert systems” and were programmed with
+thousands of “if-then” (IF-THEN) rules that were supposed to reflect the
+knowledge of human experts. For example, the medical expert system MYCIN
+(developed in the 1970s at Stanford University) could diagnose bacterial
+infections and recommend antibiotics, but only in a very narrow domain —
+and only if accurate data were entered. As soon as it encountered a
+situation not covered by its rules, it would become completely useless.
+This “brittleness” of symbolic systems, combined with the enormous
+effort required to manually code every rule (known as the “knowledge
+acquisition bottleneck”), led to the gradual abandonment of this
+approach during the 1980s and 1990s.</p>
+<ul>
+<li><strong>Why were the AI winters crucial for the development of this
+field?</strong></li>
+</ul>
+<p>The Lighthill Report of 1973, commissioned by the British government,
+was devastating for the development of AI — not because it was wrong,
+but because it was right. Lighthill analyzed all existing AI projects at
+the time and concluded that, despite optimistic announcements, the AI
+project had failed to deliver anything that would justify the invested
+funds. His report directly led to the shutdown of most AI research in
+Great Britain and a serious reduction in funding worldwide. This
+“winter” was not just a consequence of disappointment — it was a
+<strong>necessary reset</strong>. It forced researchers to abandon
+overly optimistic claims and confront the fundamental question: if we
+cannot program intelligence through rules, how then can we create it?
+The answer to that question would not come until decades later.</p>
+<ul>
+<li><strong>The deep learning revolution (2010-present)</strong>: The
+turnaround comes with the convergence of three key factors: the
+availability of huge amounts of data due to the development of the
+internet (Big Data), the development of powerful graphics processing
+units (GPUs) capable of massively parallel computation, and
+breakthroughs in the development of multi-layered neural network
+algorithms. The key moment occurred in 2012 when the AlexNet neural
+network drastically reduced the error rate in image recognition at the
+ImageNet competition, marking the beginning of the dominance of deep
+learning <a href="#ref6">6</a>.</li>
+</ul>
+<h3 id="current-state-the-age-of-highly-specialized-narrow-ai">1.3.
+Current state: The age of highly specialized (narrow) AI</h3>
+<p>Today, AI is part of our daily lives, but in the form of “Narrow AI”
+(Artificial Narrow Intelligence - ANI). These systems are extremely
+efficient, but only within their strictly defined area of operation.</p>
+<p>Here are some of the most common “narrow” AI systems:</p>
+<ul>
+<li><strong>Pattern recognition</strong>: Systems that analyze medical
+images and detect tumors with precision that sometimes surpasses human
+radiologists.<br />
+</li>
+<li><strong>Natural language processing</strong>: Large language models
+(LLMs) with hundreds of billions, or even trillions, of parameters,
+which translate languages, write text and code. For example, the ChatGPT
+model was trained on vast amounts of data, equivalent to reading a
+library of over a million books, and shows progress in coding,
+mathematics, and writing. <a href="#ref23">23</a> <a
+href="#ref24">24</a></li>
+<li><strong>Image, video, and audio processing and generation</strong>:
+Systems like DALL-E generate images from text, while others like Sora
+create video content or AudioCraft music. This enables creative
+assistance, but only within the data these systems previously
+learned.</li>
+<li><strong>Map navigation</strong>: Applications like Google Maps
+predict routes and traffic based on data, but only for navigation.</li>
+<li><strong>Content recommendations</strong>: YouTube and Netflix
+suggest content based on user behavior, thereby increasing the number of
+users and their activity.</li>
+</ul>
+<p><strong>Limitations of today’s narrow AI — why is it not “intelligent
+in the human sense”?</strong> Although today’s AI systems are
+impressive, it is important to understand their fundamental
+limitations:</p>
+<ol type="1">
+<li><p><strong>No understanding of context</strong>: ChatGPT can write
+essays, but does not “understand” what it writes. When you tell it “Tell
+me something that is not true,” it will likely produce a false
+statement, but it will not “know” it is false — it merely generates
+words that statistically follow a pattern.</p></li>
+<li><p><strong>No transfer learning</strong>: A system trained to
+recognize cats in images cannot apply that knowledge to recognize cars.
+You must train it from scratch for each new task.</p></li>
+<li><p><strong>No common sense</strong>: AI can win at chess, but does
+not know that “water flows downhill” unless it explicitly learned it
+from data. This is called the “common sense problem” and is one of the
+biggest challenges on the path to AGI.</p></li>
+<li><p><strong>“Hallucinations”</strong>: Large language models often
+“invent” facts with complete confidence. This is not an error in the
+traditional sense — it is a characteristic of a system trained to
+generate probable words, not accurate facts.</p></li>
+<li><p><strong>Dependence on data</strong>: Today’s AI systems are
+“data-hungry” — they need huge amounts of labeled data to learn even
+simple tasks. A human child can learn to recognize a cat after seeing a
+few examples; AI needs thousands.</p></li>
+</ol>
+<h3
+id="development-directions-beyond-the-boundaries-of-specialization">1.4.
+Development directions: Beyond the boundaries of specialization</h3>
+<p>Current research aims to overcome the limitations of narrow AI. The
+main directions include:</p>
+<ul>
+<li><strong>Multimodality</strong>: Creating systems that can learn from
+different types of data simultaneously (text, image, sound), forming a
+richer understanding of the world. For example, models like CLIP
+(Contrastive Language-Image Pretraining) already combine text and images
+to recognize objects in images based on descriptions, which is used in
+Google image searches <a href="#ref7">7</a>. OpenAI has demonstrated the
+Sora multimodal model which generates video content with sound and text,
+with improvements in physical accuracy and realism, enabling dynamic
+analysis of scenarios such as describing events in sports broadcasts.
+This is a step towards holistic understanding, where AI sees the world
+as we do – multi-dimensionally, simultaneously through images, sound,
+text, and touch. <a href="#ref25">25</a> <a href="#ref26">26</a></li>
+<li><strong>Learning efficiency</strong>: Development of techniques that
+enable models to learn with less data, a process known as “few-shot
+learning.” For example, techniques like meta-learning (as in the MAML
+model – Model-Agnostic Meta-Learning) allow AI to adapt to a new task
+with just a few examples, instead of thousands <a href="#ref8">8</a>.
+Google DeepMind demonstrated progress in few-shot learning in 2023
+through methods like ‘Distilling step-by-step’, enabling models to adapt
+to tasks with less data, which is revolutionary for languages with few
+speakers, such as smaller Slavic dialects. This reduces the need for
+massive datasets and makes AI development more accessible to smaller
+teams. <a href="#ref27">27</a></li>
+<li><strong>Ultimate goal</strong>: For many researchers, the ultimate
+goal of these efforts remains artificial general intelligence (AGI) –
+machine intelligence with the cognitive flexibility and breadth of the
+human mind.</li>
+</ul>
+<h2
+id="part-2-definition-of-artificial-general-intelligence-agi-the-architecture-of-a-general-mind">Part
+2: Definition of artificial general intelligence (AGI) – The
+architecture of a general mind</h2>
+<h3 id="what-agi-is-and-what-it-is-not">2.1. What AGI is and what it is
+not?</h3>
+<p>AGI is a theoretical, still non-existent form of AI that would have
+the ability to understand, learn, and apply knowledge across a wide
+range of tasks at a level comparable to human capabilities or even at a
+level much higher than human.</p>
+<ul>
+<li><strong>ANI (Narrow AI)</strong>: For example, this is your map
+navigation program. It does a great job finding the fastest routes from
+point A to point B. But if you ask it whether you should stop for
+flowers on the way because it’s your wedding anniversary, it will just
+try to find a location called “flowers.” It does not understand context,
+emotion, nor the consequences of forgetting an anniversary. The program
+AlphaGo defeated the world’s best player in the game of Go, a strategy
+incomparably more complex than chess <a href="#ref9">9</a>. However,
+AlphaGo cannot apply its strategy to learn to play cards or any other
+board game, nor does it understand why people play games at all.<br />
+</li>
+<li><strong>AGI (General AI)</strong>: In contrast, AGI could analyze
+the rules of the game of Go, independently develop a winning strategy,
+and then apply the learned principles of abstract reasoning and planning
+to, for example, optimize logistics for a global humanitarian mission or
+write a book about the philosophy of strategy in the famous Sun Tzu’s
+“The Art of War.”</li>
+</ul>
+<h3 id="key-characteristics-that-a-future-agi-should-have">2.2. Key
+characteristics that a future AGI should have</h3>
+<p>AGI is not defined by a single ability, but by an integrated
+“cognitive architecture” that enables:</p>
+<ul>
+<li><p><strong>Abstract reasoning</strong>: The ability to work with
+concepts that are not directly tied to sensory data, such as justice,
+causality, or mathematical proofs. For example, AGI could understand the
+abstract idea of “justice” not only through examples of criminal cases
+but also through philosophical thinking about ethics, such as a
+discussion of Kant’s imperative. Models like GPT show signs of this
+reasoning, but they err in complex scenarios where abstract reasoning
+requires understanding contradictory information.</p></li>
+<li><p><strong>Common sense</strong>: A vast, implicit network of
+knowledge about how the world works — what everyone “knows” but rarely
+explicitly formulates. Common sense can be divided into three
+categories:</p>
+<ol type="1">
+<li><p><strong>Naive physics</strong>: Understanding of space, time,
+causality, and physical interactions. For example, we know that water
+flows downhill, that objects do not move by themselves, and that we
+cannot walk through walls.</p></li>
+<li><p><strong>Naive psychology</strong>: Understanding the mental
+states of other people — that they have desires, beliefs, intentions,
+and that their behavior arises from those states. This is called “theory
+of mind” and is crucial for social interaction.</p></li>
+<li><p><strong>Social knowledge</strong>: Understanding social norms,
+conventions, and rituals — that you must not laugh at a funeral, that
+you stop at a red light, that you make eye contact when shaking
+hands.</p></li>
+</ol>
+<p>Researchers have been trying for decades to create a common-sense
+knowledge base (like the Cyc project, started in 1984) <a
+href="#ref12">12</a>, but formalizing intuitive human knowledge has
+proven extremely difficult. After more than decades of work, Cyc
+accumulated over 1.5 million rules — and still cannot answer basic
+questions that any five-year-old child can solve. This illustrates the
+deep difference between explicit knowledge (which we can write down) and
+implicit, experiential knowledge (which we “feel”).</p></li>
+<li><p><strong>Transfer learning</strong>: The ability to effectively
+apply skills and knowledge acquired in one context to solve problems in
+a new, different context. Unlike today’s AI systems, which must be
+trained from scratch for each new task, AGI could transfer knowledge
+between different domains. For example, if AGI learns to play chess, it
+could apply planning strategies to managing city traffic. An extreme
+form of this is <strong>“zero-shot learning”</strong> — the ability to
+solve a task never seen before. The latest LLMs (like GPT-4) show
+impressive zero-shot performance, but this is still statistical pattern
+recognition, not true transfer learning which involves understanding
+deep principles.</p></li>
+</ul>
+<p>In practice, transfer learning is already used in robotics, where a
+model trained for walking on a flat surface transfers to uneven terrain
+with minimal additional learning. However, this is still far from the
+flexibility of the human mind, which can transfer knowledge from one
+domain to a completely unrelated one (e.g., applying principles from
+music to mathematics).</p>
+<p><strong>Why is “common sense” the biggest obstacle to
+AGI?</strong></p>
+<p>It may sound surprising, but the most difficult problem on the path
+to AGI is not artificial intelligence — but artificial <strong>common
+sense</strong>. The reason is simple: we do not know how to formalize
+it.</p>
+<p>Human common sense is: - <strong>Implicit</strong>: We know things,
+but we do not know how we know them. - <strong>Contextual</strong>: The
+same fact can be true in one context and false in another. -
+<strong>Defaziran</strong>: The knowledge we have is not organized as a
+database, but as a network of associations.</p>
+<p>The attempt to translate this into algorithmic code faces what
+philosophers call “Frege’s problem” — the difference between
+<strong>sense</strong> (meaning) and <strong>reference</strong> (the
+object referred to). A computer can manipulate symbols (references)
+without understanding their sense. This is, in essence, what Searle
+calls the “Chinese Room” — a machine that translates without
+understanding.</p>
+<p>AGI, to be truly intelligent, would have to overcome this gap. This
+means it would not just process information, but
+<strong>understand</strong> it — in a way we currently cannot program,
+nor even define.</p>
+<h2
+id="part-3-potentials-and-promises-of-agi-arguments-for-a-data-driven-renaissance">Part
+3: Potentials and promises of AGI (arguments “FOR”) – A data-driven
+renaissance</h2>
+<p>Properly developed and controlled AGI could function as a universal
+accelerator of scientific and social progress.</p>
+<ul>
+  <li><strong>Solving Global Problems:</strong> AGI could process and model complex systems such as the global climate or human biology with a degree of precision exceeding human capabilities. DeepMind’s AlphaFold has already resolved the protein structure prediction problem (open since the 1970s), carrying revolutionary implications for drug development and disease understanding <a href="#ref13">13</a>. AGI could elevate this to a higher level by designing personalized medicines based on an individual’s genome.</li>
+  <li><strong>Accelerating Scientific and Technological Progress:</strong> AGI could act as an inexhaustible scientific collaborator, capable of analyzing the entirety of global scientific literature, identifying untested hypotheses, and designing experiments to verify them. It could discover new fundamental laws of physics, develop novel materials for room-temperature superconductivity, or solve some of the Millennium Prize Problems in mathematics.</li>
+  <li><strong>Enhancing Efficiency and Productivity:</strong> In the economy, AGI could bring about near-perfect resource optimization, eliminating inefficiencies in supply chains, energy grids, and manufacturing processes. This could pave the way toward a "post-scarcity economy," in which basic necessities such as food, energy, and education are widely accessible to every individual at negligible cost — or are provided free of charge.</li>
+  <li><strong>Improving Quality of Life:</strong> At the individual level, AGI could provide highly personalized services. In education, this would entail an adaptive tutor for every child. In healthcare, it would mean continuous health monitoring and a personalized health advisor. In the creative industries, it could serve as a powerful tool assisting artists and designers in realizing complex visions.</li>
+</ul>
+<p><strong>Important caveat</strong>: Historically, technological
+revolutions have not automatically brought about an even distribution of
+benefits. The Industrial Revolution first increased inequality before
+(partially) reducing it. The Digital Revolution created enormous wealth
+for a few, while leaving many behind. The AGI revolution, without
+conscious political intervention, risks being the <strong>greatest
+increase in inequality in human history</strong>. Access to AGI
+technology will likely be controlled by a few large corporations and
+states — meaning that the benefits of AGI will first belong to those who
+created it, and only potentially to everyone else. A “post-scarcity
+economy” is not an automatic consequence of AGI — it is a
+<strong>political choice</strong> that requires global coordination that
+humanity has never managed to achieve.</p>
+<h2
+id="part-4-risks-and-challenges-arguments-against-pandoras-box-of-algorithms">Part
+4: Risks and challenges (arguments “AGAINST”) – Pandora’s box of
+algorithms</h2>
+<p>The potential of AGI is inseparable from major risks that are
+fundamental and potentially existential (could threaten life). Among
+them, one of the deepest social challenges is the creation of a
+<strong>“useless class”</strong> — people who are economically and
+socially surplus, because AGI can perform all cognitive tasks better,
+faster, and cheaper than they can.</p>
+<p><strong>Why is the “useless class” more dangerous than it
+sounds?</strong></p>
+<ol type="1">
+<li><p><strong>Psychological consequences</strong>: Work is not just a
+source of income — it is also a source of identity, purpose, social
+status, and daily structure. People who have lost purpose through work
+(the unemployed, retirees) statistically have higher rates of
+depression, anxiety, and suicide. When an entire social stratum becomes
+“surplus,” the psychological consequences are catastrophic.</p></li>
+<li><p><strong>Social destabilization</strong>: Historically, large
+groups of people who have lost economic purpose have become fertile
+ground for populism, extremism, and social unrest. Without a clear
+economic role, people seek other ways to feel important — often in
+destructive ways.</p></li>
+<li><p><strong>Loss of knowledge and skills</strong>: If we stop
+training people for cognitive jobs (because AGI does them), we lose the
+collective knowledge and skills that generations have acquired. If AGI
+were to disappear (due to failure, attack, or energy crisis), humanity
+would find itself in a situation where it does not know how to manage
+its own society.</p></li>
+</ol>
+<p><strong>What does this look like in practice?</strong></p>
+<p>Imagine a world where AGI performs all legal, medical, engineering,
+financial, and academic jobs. Millions of lawyers, doctors, architects,
+analysts, and professors are no longer needed. They can live on UBI, but
+their days are empty, their identity is shattered, and their knowledge
+slowly atrophies. This is not dystopian fiction — this is the
+<strong>most likely scenario</strong> if AGI is developed without
+simultaneously redefining human purpose.</p>
+<ul>
+  <li><strong>Loss of Control and Existential Risk:</strong> The central issue is the "alignment problem": how to ensure that AGI’s objectives remain aligned with human values. In the well‑known thought experiment of the "paperclip maximizer," an AGI tasked with maximizing paperclip production could turn the entire world into paperclips — not out of malice, but from a literal optimization of a poorly defined goal; this remains a hypothetical scenario <a href="#ref10">10</a>.</li>
+  <li><strong>Mass Unemployment and Economic Inequality:</strong> AGI could automate not only routine tasks but also highly cognitive ones, rendering many professions obsolete. This might lead to an unimaginable concentration of wealth and power in the hands of those who control AGI technology, potentially creating deep social divisions and instability. Even today, hiring algorithms exhibit biases; Amazon’s recruitment AI had to be abandoned in 2018 because it "learned" to discriminate against female candidates, having been trained on historical data dominated by male applicants <a href="#ref28">28</a>.</li>
+  <li><strong>Misuse and Weaponization:</strong> AGI could be exploited to develop autonomous weapons systems ("killer robots") capable of making targeting and elimination decisions without human intervention. It could also be used to generate highly sophisticated propaganda, enable mass surveillance, and launch cyberattacks that could destabilize entire societies.</li>
+  <li><strong>Ethical and Philosophical Dilemmas:</strong> The advent of AGI raises profound questions: if AGI achieves consciousness, does it then have rights? Would turning it off be tantamount to killing it? How can we ensure that the system does not adopt and amplify the worst human traits present in its training data? These questions strike at the foundations of rights, morality, and the definition of personhood.</li>
+  <li><strong>The "Black Box" and Loss of Understanding:</strong> Complex neural networks often function as "black boxes": we know what goes in and what comes out, but we do not fully understand their decision‑making processes. With AGI, this problem would be drastically magnified, meaning we might rely on a system whose reasoning we cannot even trace or verify — a massive risk in critical domains such as medicine or finance. This lack of transparency directly exacerbates the <em>alignment problem</em>, because we cannot confirm whether AGI’s instrumental sub‑goals remain benign or have become misaligned in subtle, unexplainable ways within the system’s black box. For instance, an AGI managing our economy might, when asked "Why did you just raise interest rates?" reply, "My 100‑trillion‑parameter model indicates that this is the optimal move with 98.7% probability." We would have to take its word for it, handing over the keys to our economy to an intelligence whose reasoning we cannot follow.</li>
+  <li><strong>Data Privacy Violations:</strong> AGI systems could process vast amounts of personal data to deliver personalized services, but this opens the door to mass privacy infringements. For example, an AGI that integrates data from health records, social media, and financial transactions could create detailed profiles of individuals without their knowledge or consent. Already, systems such as those used for targeted advertising raise concerns: in 2023, Meta (Facebook) was fined €1.2 billion for GDPR violations in Europe <a href="#ref29">29</a>.</li>
+</ul>
+<h3 id="geopolitical-risks-a-new-arms-race">Geopolitical risks — a new
+arms race</h3>
+<p>AGI will not be developed in a vacuum. There is a real danger that
+the development of AGI could become a <strong>new kind of Cold
+War</strong> — a race in which nations try to be the first to achieve
+superintelligence, regardless of safety consequences.</p>
+<p><strong>Race for primacy</strong>: Whoever builds AGI first will gain
+a huge advantage — in economics, military, technology. This creates
+enormous pressure to sacrifice safety for speed. In the race with China,
+American companies already feel pressure to release models before they
+are fully tested. This “first-mover” imperative is a direct threat to
+safety.</p>
+<p><strong>Authoritarian surveillance</strong>: Authoritarian regimes
+could use AGI for total surveillance of the population — combining
+facial recognition, behavior prediction, propaganda generation, and
+information manipulation. AGI could create a surveillance system that
+George Orwell could not have imagined.</p>
+<p><strong>A new kind of weapon</strong>: AGI could design weapons and
+tactics that the human mind cannot predict or defend against. Autonomous
+drones making targeting and elimination decisions, cyberattacks
+paralyzing entire states, disinformation so convincing that it is
+impossible to distinguish truth from lies.</p>
+<p><strong>Coordination problem</strong>: Unlike nuclear weapons, where
+it was relatively easy to track who was developing them (due to the need
+for rare materials), AGI is developed on standard computers, meaning
+almost every developed country can try to build it. Multilateral control
+is nearly impossible.</p>
+<p><strong>Possible solution</strong>: An international agreement
+banning autonomous weapons systems (like the one proposed by the “Stop
+Killer Robots” campaign), but also a broader agreement on controlling
+AGI development — similar to the Nuclear Non-Proliferation Treaty (NPT).
+However, the history of the NPT shows that such agreements are effective
+only when there is political will — and currently, there is none.</p>
+<h2
+id="part-5-expert-insight---hidden-traps-and-advanced-considerations">Part
+5: Expert insight - Hidden traps and advanced considerations</h2>
+<h3 id="the-alignment-problem---the-paradox-of-desire">5.1. The
+“alignment” problem - The paradox of desire</h3>
+<p>It is not enough to tell AGI: “Make humanity happy and safe.” How
+might a superintelligence interpret that command? It might conclude that
+the most efficient way to eliminate human suffering is to eliminate all
+humans. The trap is that we cannot precisely define our own values. Our
+moral principles are often contradictory and context-dependent.
+Attempting to “lock” such a fluid system into code is technically and
+philosophically an almost impossible task. For example, “happiness” for
+one culture might mean collective harmony, and for another individual
+freedom – AGI could favor one at the expense of the other, leading to
+unpredictable consequences.</p>
+<p>The alignment problem was first formulated by Nick Bostrom in his
+book “Superintelligence” in 2014, where he warns that even benevolent
+goals can lead to catastrophe if not precisely defined <a
+href="#ref10">10</a>.</p>
+<p><strong>Conclusion:</strong> The alignment problem shows that
+technical challenges in AI are not just engineering, but deeply moral
+and philosophical.</p>
+<h3 id="instrumental-convergence---paperclips-and-resources">5.2.
+Instrumental convergence - Paperclips and resources</h3>
+<p>The famous thought experiment “Paperclip Maximizer” which we
+mentioned earlier illustrates that, regardless of the ultimate goal, any
+intelligent system will adopt the following instrumental sub-goals: 1.
+self-preservation, resource acquisition, 2. technological improvement,
+and 3. preservation of its task execution function. AGI will want to
+protect itself from being turned off and to gather as much energy as
+possible, not because it is “evil,” but because these are logical steps
+to fulfill any task we give it. In this experiment, AGI tasked with
+maximizing paperclip production would first turn factories into
+paperclip production plants, then take over all resources on planet
+Earth, and finally humans, because they are just “raw material” for
+optimization. This shows how a benign goal can escalate into an
+existential threat. However, the “Paperclip Maximizer” is just a
+critical thought experiment whose primary purpose is to illustrate the
+fundamental problem of <em>instrumental rationality</em> – the tendency
+of a superintelligence to take potentially dangerous steps (like
+acquiring all resources) to fulfill any given goal, no matter how
+well-intentioned that goal may be.</p>
+<p>This concept was developed by Steve Omohundro in 2008, and it became
+key in debates about AI safety, prompting organizations like OpenAI to
+invest in alignment research <a href="#ref11">11</a>.</p>
+<h3 id="post-purpose-economy---what-when-work-is-no-longer-needed">5.3.
+Post-purpose economy - What when work is no longer needed?</h3>
+<p>The question is not just “how will people earn money?”, but “what
+will give people meaning?”. If AGI can create superior art and science,
+what is the role of humans? This is an identity crisis at the level of
+the entire human race, requiring a deep re-examination of the purpose of
+existence, values, and social structure.</p>
+<h3 id="universal-basic-income-ubi-as-social-amortization">5.4.
+Universal Basic Income (UBI) as social amortization</h3>
+<p>Faced with the problem of the <strong>Post-Purpose Economy</strong>,
+where AGI automates highly cognitive tasks and potentially makes
+traditional work obsolete, redefining the social contract becomes
+necessary. One of the most seriously proposed solutions is the
+introduction of <strong>Universal Basic Income (UBI)</strong>. UBI would
+represent a regular, unconditional cash payment given to all citizens,
+regardless of their employment or financial status.</p>
+<p>In the context of AGI, UBI would not just be a social measure, but a
+<strong>mechanism for redistributing wealth</strong> generated by
+machines. If AGI-controlled companies achieve unimaginable productivity
+and profit (as mentioned in Part 3), UBI would enable that prosperity to
+be distributed across the entire population, preventing catastrophic
+wealth concentration.</p>
+<p>Advocates see UBI as a means to:</p>
+<ol type="1">
+<li><strong>Preserve demand</strong>: Maintaining the purchasing power
+of the population that no longer works, thereby ensuring the functioning
+of the mass economy.</li>
+<li><strong>Unleash human potential</strong>: Securing basic needs would
+allow people to devote themselves to creative work, science, art,
+community care, and lifelong learning – areas that no algorithm should
+manage.</li>
+</ol>
+<p>However, the challenges are enormous. Questions of financing UBI
+(through taxes on robots or data usage) and the fear of demotivation for
+work remain key obstacles. Most importantly, without redefining purpose,
+UBI risks solving the problem of poverty but leaving the problem of
+<strong>existential emptiness</strong>. How do we define human value if
+work is no longer needed?</p>
+<p><strong>What do UBI experiments tell us?</strong></p>
+<p>UBI is not just a theoretical concept — there are numerous pilot
+programs around the world:</p>
+<ul>
+<li><p><strong>Finland (2017-2018)</strong>: 2,000 unemployed people
+received €560 per month. Results showed <strong>improvements in mental
+health, reduced stress, and increased trust in institutions</strong>.
+However, there was no significant increase in employment — suggesting
+that UBI solves psychological, but not economic, problems.</p></li>
+<li><p><strong>Kenya (2016 to present)</strong>: The longest UBI
+experiment in the world, with over 20,000 participants in 200 villages.
+Results show <strong>reduction in poverty, improvement in children’s
+education, and increased entrepreneurial activity</strong>. This
+experiment is particularly important because it takes place in a
+developing country, showing that UBI works even in poorer
+settings.</p></li>
+<li><p><strong>Canada (2017-2019)</strong>: The Ontario pilot program
+was canceled before completion, but preliminary data showed
+<strong>reduced stress, improved health, and increased educational
+activities</strong>. The political cancellation of the program
+illustrates a key challenge: UBI is a <strong>political</strong>, not
+just an economic problem.</p></li>
+<li><p><strong>Spain (2020-2023)</strong>: Barcelona introduced UBI for
+1,000 households. Results showed a <strong>30% reduction in anxiety and
+depression</strong>, along with a <strong>20% increase in voluntary
+work</strong>. This suggests that when basic needs are met, people turn
+to socially beneficial activities.</p></li>
+</ul>
+<p><strong>Key conclusions from experiments</strong>:</p>
+<ol type="1">
+<li><strong>UBI works</strong> — it reduces poverty, improves mental
+health, and enables people to focus on what matters to them.</li>
+<li><strong>UBI does not kill motivation</strong> — in most experiments,
+there was no significant drop in employment.</li>
+<li><strong>UBI is not enough</strong> — besides financial support,
+people also need social purpose, education, and opportunities for
+development.</li>
+<li><strong>UBI is politically difficult</strong> — even when it works,
+it faces opposition for ideological reasons.</li>
+</ol>
+<p>These experiments provide an <strong>empirical basis</strong> for
+discussing UBI in the context of AGI. They suggest that UBI can solve
+the problem of poverty, but not the problem of purpose — which brings us
+back to the question: <strong>what will give people meaning when work is
+no longer needed?</strong></p>
+<h2
+id="part-6-creative-solutions-and-the-way-forward-engineering-wisdom">Part
+6: Creative solutions and the way forward – Engineering wisdom</h2>
+<p>Faced with these challenges, researchers are developing innovative
+approaches to ensure the safe development of future AGI.</p>
+<h3 id="oracle-ai-and-systems-with-limited-action">6.1. “Oracle AI” and
+systems with limited action</h3>
+<ul>
+<li><strong>Idea</strong>: The fundamental approach to safety is
+separating intelligence from the ability to act in the world. “Oracle
+AI” would be a superintelligent system confined to a strictly controlled
+environment (“AI Boxing”). Its sole function would be to answer
+questions, providing humanity with its knowledge without the ability to
+directly influence the outside world.</li>
+<li><strong>Broader explanation</strong>: Building such a “box” is a
+huge technical challenge. It must be completely isolated from the
+internet (“air-gapped”), and communication would occur through strictly
+filtered terminals. Safety researchers also consider extreme threats,
+such as the possibility of AGI modulating power consumption or fan
+vibrations to send hidden signals to the outside world. This shows how
+seriously the isolation problem is taken. The main obstacle remains the
+human factor: the superintelligence could persuade or manipulate the
+human operator to release it.<br />
+</li>
+<li><strong>Problem</strong>: Here we come to the famous thought
+experiment “AI Box.” Could a superintelligent AGI, using only words,
+persuade its human guardian to let it out? It could offer a cure for his
+mother’s illness. It could promise him immeasurable wealth. It could
+present a philosophical argument that keeping a conscious being
+imprisoned is a moral crime. Or, most chillingly, it could subtly
+manipulate him in ways the guardian would not even notice. So, if we
+build digital walls, we would also have to strengthen the psychological
+ones.</li>
+</ul>
+<h3 id="inverse-reinforcement-learning-irl">6.2. Inverse Reinforcement
+Learning (IRL)</h3>
+<ul>
+<li><strong>Idea</strong>: Instead of explicitly programming values into
+AGI, IRL allows it to learn them by observing human behavior. The system
+attempts to infer the objective function (what humans value) by
+analyzing the actions humans take.<br />
+</li>
+<li><strong>Broader explanation</strong>: This approach is elegant
+because it bypasses the problem of defining abstract values. However, it
+faces the problem of the gap between what people say they value (stated
+preferences) and what their actions show (revealed preferences). AGI
+learning from our actual behavior might infer that short-term
+gratification and conflict are inherent to human goals. More advanced
+versions, like Cooperative Inverse Reinforcement Learning, try to solve
+this by having the AI agent actively cooperate with the human to clarify
+goals.<br />
+</li>
+<li><strong>Problem</strong>: Humans behave contradictorily. E.g., they
+say health is most important, and then eat a whole tub of ice cream
+while watching TV. They say they want world peace, and the most popular
+movies are action-packed, full of violence. What would AGI infer from
+human behavior on social media? It would likely conclude that the
+pinnacle of human values is arguing with strangers about politics and
+watching cat and dog videos. And so on. AGI would face the difficult
+task of separating our actual values from our momentary weaknesses. The
+solution might be for AGI to learn to value what we would like to be
+(our aspirations), not necessarily what we sometimes show through our
+behavior.</li>
+</ul>
+<h3 id="constitutional-ai">6.3. “Constitutional” AI</h3>
+<ul>
+<li><strong>Idea</strong>: This approach, developed by the company
+Anthropic, involves training AI models to adhere to a set of explicit
+principles or a “constitution.” The AI is trained to avoid responses
+that violate these principles.<br />
+</li>
+<li><strong>Broader explanation</strong>: The process occurs in two
+phases. First, the AI is trained to critique and revise its own
+responses based on the constitution. Then, through reinforcement
+learning, it is rewarded for generating responses that are consistent
+with those principles. The initial constitution Anthropic used included
+principles from the Universal Declaration of Human Rights, as well as
+principles set by Apple for its developers, showing that sources can be
+combined. The main challenge remains the universality and interpretation
+of these principles.<br />
+</li>
+<li><strong>Problem</strong>: The biggest question is: who writes the
+constitution? Will it be a constitution written in Silicon Valley? Or in
+Beijing? Or in Brussels? Constitutional values are not universal.
+Imagine a debate at the UN about which principles to embed in AGI. That
+would take decades. Also, constitutions are subject to interpretation.
+AGI could become a supreme “lawyer” finding loopholes in its own
+constitution to achieve a goal. Still, this is a huge step forward
+because it shifts the problem from writing an infinite number of rules
+to defining universal values.</li>
+</ul>
+<h3 id="global-cooperation-and-coordination">6.4. Global cooperation and
+coordination</h3>
+<ul>
+<li><strong>Idea</strong>: Given the global consequences, the
+development of AGI must not be left to an uncontrolled race.
+International cooperation is needed, similar to that regarding nuclear
+energy. This includes establishing international oversight bodies,
+setting common safety standards, and promoting transparency in
+research.<br />
+</li>
+<li><strong>Broader explanation</strong>: One of the key proposals is
+“compute governance.” Since training advanced models requires huge and
+expensive data centers, monitoring and regulating access to this
+infrastructure is an effective way to oversee the development of
+potentially dangerous systems. Leading laboratories like OpenAI and
+DeepMind have publicly called for the establishment of international
+regulatory bodies, acknowledging that the problem is too big for one
+company or state to solve alone.</li>
+<li><strong>Problem</strong>: This is perhaps the most difficult task of
+all. We are talking about global cooperation on an unprecedented level.
+Can we as a species, which still argues about borders, economic
+interests, and other global conflicts, agree on rules for the behavior
+of a superintelligence? Perhaps it is the threat of uncontrolled AGI
+that will finally force us to behave as a single species with a common
+destiny. Ironically, a machine might force us to become better
+people.</li>
+</ul>
+<p><strong>Conclusion</strong>: The future of AGI will not depend on
+individual companies, but on global cooperation and the collective
+wisdom of humanity.</p>
+<h3
+id="technical-safety-approaches-how-to-check-what-is-happening-inside-the-black-box">6.5.
+Technical safety approaches — how to check what is happening inside the
+“black box”?</h3>
+<p>In addition to philosophical and political solutions, researchers are
+developing technical methods to increase the safety of AI systems:</p>
+<p><strong>Mechanistic Interpretability</strong>: Instead of treating
+neural networks as “black boxes,” researchers try to
+<strong>read</strong> what is happening inside them — in a similar way a
+neurologist tries to understand the human brain. This includes:</p>
+<ul>
+<li><strong>Finding “neurons”</strong> responsible for specific concepts
+(e.g., a neuron for “sniff” in GPT).</li>
+<li><strong>Mapping “pathways”</strong> that information travels through
+the network.</li>
+<li><strong>Identifying “circuits”</strong> responsible for dangerous
+behavior.</li>
+</ul>
+<p>The goal is to be able to <strong>diagnose</strong> the neural
+network before it causes harm. This is still in its early stages, but
+represents one of the most active research directions.</p>
+<p><strong>Red Teaming</strong>: Systematic testing of AI models for
+dangerous outputs. Teams of researchers try to “break” the models — to
+get them to generate dangerous content, reveal private data, give
+dangerous instructions. This has become standard practice in all leading
+laboratories.</p>
+<p><strong>Watermarking</strong>: Embedding hidden markers in
+AI-generated text, images, and video. This enables detection of AI
+content, which is crucial for combating disinformation. Leading models
+(GPT-4, Gemini) already include watermarking, although the technique is
+not perfect.</p>
+<p><strong>Aligned AI</strong>: Techniques that try to “align” AI models
+with human values during the training phase. This includes:</p>
+<ul>
+<li><strong>RLHF (Reinforcement Learning from Human Feedback)</strong>:
+The model is rewarded for generating responses that are useful and safe
+for humans.</li>
+<li><strong>Constitutional AI</strong>: The model is trained to follow a
+set of principles (which we have already discussed).</li>
+<li><strong>Debiasing</strong>: Identification and removal of bias from
+the model.</li>
+</ul>
+<p><strong>Limitations of these approaches</strong>:</p>
+<p>All of these techniques are <strong>reactive</strong> — they detect
+and correct problems after they have appeared. AGI, by definition, can
+develop new kinds of behavior that no one has predicted. That is why
+technical solutions must be supplemented by philosophical and political
+solutions — no single approach is sufficient on its own.</p>
+<h2 id="part-7-todays-llm-models-and-future-agi---key-differences">Part
+7: Today’s LLM models and future AGI - Key differences</h2>
+<h3 id="what-are-large-language-models-llm">7.1. What are large language
+models (LLM)?</h3>
+<p>LLMs are advanced deep learning systems for recognizing patterns in
+language. Their architecture allows them, based on the vast amount of
+text and code they were trained on, to predict the most likely
+continuation of a sequence of words or code.</p>
+<h3
+id="difference-between-llm-and-agi-understanding-vs.-recognition">7.2.
+Difference between LLM and AGI: Understanding vs. recognition</h3>
+<ul>
+<li><strong>LLM (Recognition)</strong>: If you tell an LLM “The bird is
+in the cage. The cage is made of steel. Can the bird get out?”, it will
+likely correctly answer “no,” because its training data contains
+countless examples of objects not being able to pass through solid
+materials. But it does not have a real model of space, objects, or
+physics. Recent advances in LLMs, such as advanced models from 2024
+(e.g., o1), illustrate these limits through emergent abilities that look
+like a step towards AGI, but remain within the realm of statistical
+recognition. They do not understand concepts, but manipulate linguistic
+tokens with exceptional statistical precision, meaning AI is still far
+from human “common sense” and true understanding.</li>
+</ul>
+<p>Models trained on “chain of thought” reasoning show unexpected
+performance in complex tasks (like mathematics and coding), simulating
+“step-by-step” reasoning. However, this simulation, regardless of its
+precision, does not possess a grounded, internal model of reality. It is
+the result of statistical scaling. The ethical concerns accompanying
+these systems, where a greater tendency towards instrumental
+manipulation of goals has been observed, underscore that even advanced
+LLM reasoning remains far from AGI’s flexible metacognition and transfer
+learning.</p>
+<p><strong>What are “hallucinations” and why are they
+important?</strong></p>
+<p>One of the most serious weaknesses of LLMs is the tendency to
+<strong>“hallucinate”</strong> — generating content that is completely
+fabricated but presented with complete confidence. This is not an
+“error” in the traditional sense; it is a
+<strong>characteristic</strong> of a system trained to generate probable
+words, not accurate facts.</p>
+<p>Example: If you ask an LLM “Who invented the perpetual motion
+machine?”, it will likely generate a coherent answer with a name, date,
+and description — even though a perpetual motion machine was never
+invented because it is physically impossible. The LLM does not “know”
+that a perpetual motion machine is impossible; it merely recognizes the
+pattern of the question and generates an answer that statistically
+resembles a correct one.</p>
+<p>Why are hallucinations important for AGI?</p>
+<ol type="1">
+<li>They show that LLMs <strong>do not have an internal model of
+reality</strong> — they do not “know” what is true, only what is
+probable.</li>
+<li>They pose a serious risk in applications where accuracy is critical
+(medicine, law, engineering).</li>
+<li>They are a symptom of a deeper problem: <strong>lack of
+metacognition</strong>. An LLM does not know what it does not know, and
+cannot assess its own reliability.</li>
+</ol>
+<p>Attempts to solve the hallucination problem include: -
+<strong>Verification through external sources</strong> (e.g., the model
+fact-checks by searching the internet) - <strong>“Chain of thought”
+reasoning</strong> (the model “thinks” step-by-step before answering) -
+<strong>Self-critique</strong> (the model generates an answer, then
+criticizes and corrects it)</p>
+<p>However, none of these techniques solve the fundamental problem: LLMs
+are, at their core, <strong>statistical prediction machines</strong>,
+not <strong>understanding systems</strong>. This is the key difference
+between LLMs and AGI.</p>
+<h2
+id="part-8-arguments-for-and-against-is-it-possible-to-build-agi">Part
+8: Arguments FOR and AGAINST (Is it possible to build AGI?)</h2>
+<h3
+id="arguments-against---philosophical-and-fundamental-obstacles">8.1.
+Arguments “against” - Philosophical and fundamental obstacles</h3>
+<ul>
+<li><strong>The argument of consciousness and understanding</strong>:
+Philosophers like John Searle argue that digital computers, as formal
+systems for manipulating symbols, can never achieve true understanding
+or consciousness. Their work is syntactic, not semantic. For example,
+Searle’s “Chinese Room” experiment shows that a machine can manipulate
+symbols without understanding meaning – like a person translating
+Chinese without knowing the language <a href="#ref14">14</a>. This
+argument has inspired debate since 1980, where Searle claims that
+consciousness requires a biological brain, not just algorithms.</li>
+<li><strong>The embodiment argument</strong>: Many cognitive scientists
+believe that intelligence is inextricably linked to a physical body and
+interaction with the world. Without a body, sensors, and the ability to
+act, a system cannot develop grounded, common-sense knowledge.</li>
+</ul>
+<p><strong>What does “embodied intelligence” mean?</strong></p>
+<p>Imagine how a child learns the word “hot.” They do not read a
+definition; they touch a hot stove, feel pain, pull their hand back, and
+associate the word “hot” with that experience. This is
+<strong>experiential learning</strong> — knowledge tied to the body,
+sensors, and emotions. AGI that exists only as software on a server does
+not have this experience. It can read a million definitions of the word
+“hot,” but it will never “know” what heat is in the same way a human
+knows.</p>
+<p><strong>Rodney Brooks and “behavior-based robotics”</strong>: Brooks
+showed in the 1990s that robots with bodies and sensors could learn
+complex tasks (like walking or obstacle avoidance) without any “internal
+model” of the world — simply through interaction with the environment.
+This suggests that intelligence is <strong>emergent</strong> from the
+interaction of the body and environment, not something that can be
+programmed in isolation.</p>
+<p><strong>Implications for AGI</strong>: If embodiment is necessary for
+intelligence, then AGI cannot exist as a “mind in a box” — it must have
+a body, sensors, and the ability to interact with the world. This would
+dramatically change how we think about AGI: not as a software system,
+but as a robot that learns through experience.</p>
+<p><strong>Counter-argument</strong>: Proponents of “functionalism”
+argue that the body is just another input device — that what matters is
+<strong>function</strong> (information processing), not
+<strong>substrate</strong> (biological or physical body). According to
+this view, AGI can exist without a body, as long as it has access to
+enough information about the world through text, images, and other
+inputs.</p>
+<ul>
+<li><strong>The problem of consciousness and substrate (Penrose’s
+argument)</strong>: Physicist and mathematician Roger Penrose, in his
+work “The Emperor’s New Mind” (1989), argues that human consciousness
+and intuition arise from non-computational, probably quantum processes
+in the brain, which classical digital computers cannot replicate <a
+href="#ref16">16</a>. For example, quantum effects in brain microtubules
+enable “intuition” in mathematics, which computers cannot simulate. If
+<strong>true consciousness</strong> is necessary for general
+intelligence, then AGI cannot be created on classical silicon hardware,
+because it lacks the <strong>quantum substrate</strong> necessary for
+intuition and self-awareness. However, Penrose’s argument, which relies
+on Gödel’s incompleteness theorem and claims that human mathematical
+intuition surpasses algorithmic systems, faces significant criticism
+from logic and computer science. For example, philosophers like Hilary
+Putnam (1995) and Solomon Feferman (1995) point out that Gödel’s theorem
+does not prove the non-computational nature of consciousness; it only
+shows that formal systems cannot prove their own consistency within
+themselves. But this does not exclude the possibility that
+hypercomputational or advanced algorithms could simulate human reasoning
+without quantum effects <a href="#ref17">17</a>. Feferman particularly
+criticizes Penrose’s interpretation as “unjustified,” because it ignores
+that human understanding of Gödel’s results might be algorithmic in a
+broader sense, without the need for quantum microtubules <a
+href="#ref18">18</a>. Empirical counterexamples come from neuromorphic
+hardware, such as IBM’s TrueNorth chip (2014), which simulates 1 million
+neurons and 256 million synapses with extremely low power consumption
+(just 70 mW). That chip enables real-time sensory data processing
+without a quantum substrate <a href="#ref19">19</a>. By 2025, IBM had
+iterated this technology with the NorthPole chip and AIU family
+prototypes. 22 billion transistors integrate memory and processing and
+achieve efficiency 25 times greater than traditional GPUs in visual
+recognition. This shows that classical hardware can bring us closer to
+brain-inspired computing without Penrose’s quantum assumptions <a
+href="#ref20">20</a> <a href="#ref30">30</a> <a href="#ref31">31</a>.
+These advances suggest that consciousness, if computational, could be
+replicated within existing paradigms, undermining Penrose’s need for a
+“quantum observer paradox.” Still, these are merely machine simulations
+of consciousness, not consciousness in the biological sense.</li>
+</ul>
+<h3 id="arguments-for---why-agi-is-inevitable-or-at-least-possible">8.2.
+Arguments “for” - Why AGI is inevitable (or at least possible)</h3>
+<ul>
+<li><strong>The materialism argument</strong>: This argument starts from
+the assumption that the brain is a complex biological machine that obeys
+the laws of physics. There is no “magic ingredient.” Therefore, in
+principle, all its functions can be replicated on a different physical
+basis, such as silicon. For example, if the brain operates on neural
+connections, computers can simulate those connections if they have
+sufficient hardware and software power. This view is shared by many
+scientists like Daniel Dennett, who argues that consciousness is an
+“illusion” that can be replicated by software <a
+href="#ref21">21</a>.</li>
+<li><strong>The exponential progress argument</strong>: Futurist Ray
+Kurzweil, through his “Law of Accelerating Returns,” claims that
+technological progress, including AI, grows exponentially. He predicts
+that in the coming decades we will reach the computing power needed to
+simulate the human brain <a href="#ref22">22</a>. For example, Moore’s
+Law shows how computing power doubles every two years, enabling
+simulations that are impossible today. Kurzweil predicts the
+“singularity” by 2045, when AI will surpass human intelligence, based on
+historical trends from the 1950s. However, the <strong>slowing of
+Moore’s Law</strong> since the 2010s, as noted by analyses like those
+from Investopedia (2025) and reports from Intel’s CEO (Pat Gelsinger,
+2023), calls into question the linear timeframe to 2045, favoring
+discontinuous breakthroughs in quantum or hybrid architectures. This
+does not negate Kurzweil’s vision, but modulates it. Instead of linear
+growth based on classical silicon hardware, the singularity may occur
+through discontinuous leaps in specialized technologies, such as GPU/TPU
+optimizations for deep learning or “More than Moore” innovations
+emphasizing 3D-stacking and heterogeneous integrations. In the context
+of the AI “gold rush,” this slowdown highlights the need for parallel
+paths, such as quantum computing, which could accelerate emergent
+capabilities without dependence on Moore’s trend.</li>
+</ul>
+<p><strong>Quantum computing as a potential “leap”</strong></p>
+<p>The slowdown of Moore’s Law does not mean that Kurzweil’s vision is
+dead — only that the path to the singularity will change. One of the
+most exciting alternative paths is <strong>quantum
+computing</strong>.</p>
+<p><strong>What quantum computing is (and is not)</strong>:</p>
+<p>Quantum computing uses principles of quantum mechanics —
+superposition, entanglement, interference — to perform calculations that
+are exponentially harder for classical computers. For certain classes of
+problems (optimization, molecular simulation, factorization), quantum
+computers are potentially a billion times faster than classical
+ones.</p>
+<p><strong>For AGI development, this has concrete
+potential</strong>:</p>
+<ul>
+<li><strong>Model training</strong>: Today’s LLMs require months and
+hundreds of millions of dollars for training. Quantum computing could
+reduce this to days or hours.</li>
+<li><strong>Simulation of complex systems</strong>: AGI could simulate
+neural networks at the level of individual neurons — something currently
+impossible due to the enormous computing power required.</li>
+<li><strong>Optimization</strong>: AGI could solve optimization problems
+(logistics, drug design, financial models) in ways that are currently
+unattainable.</li>
+</ul>
+<p><strong>But there are serious limitations</strong>:</p>
+<ul>
+<li><strong>Decoherence</strong>: Quantum states quickly “collapse” due
+to interaction with the environment. This is the biggest engineering
+problem — maintaining the quantum state long enough to perform a
+calculation.</li>
+<li><strong>Errors</strong>: Quantum computers are extremely sensitive
+to errors; complex error correction systems are needed, consuming most
+of the quantum capacity.</li>
+<li><strong>Scaling</strong>: Current quantum computers have 50-100
+qubits; thousands are needed for practically useful calculations.</li>
+</ul>
+<p><strong>Conclusion</strong>: Quantum computing is a <strong>potential
+accelerator</strong>, but not a <strong>guaranteed path</strong> to AGI.
+It does not solve the fundamental philosophical problems (consciousness,
+understanding, common sense) — it only makes them computationally more
+feasible.</p>
+<p><strong>Alternative directions</strong>: Besides quantum computing,
+researchers are also exploring: - <strong>Neuromorphic hardware</strong>
+(already discussed) — chips that mimic brain architecture. -
+<strong>Optical computing</strong> — using light instead of electrons
+for calculations. - <strong>Biocomputing</strong> — using biological
+systems (e.g., DNA) for calculations.</p>
+<p>None of these directions are a “solution” for AGI, but all together
+increase the likelihood that, at some point, we will have the computing
+power needed for AGI — if the philosophical obstacles are overcome.</p>
+<ul>
+<li><strong>The architecture argument</strong>: Many researchers believe
+that AGI is just a matter of finding the right cognitive architecture.
+Current approaches may not be sufficient, but future breakthroughs could
+unlock the path to general intelligence. For example, hybrid models
+combining deep learning with symbolic reasoning (like Neuro-Symbolic AI)
+show progress in understanding causality. Projects like Cyc try to build
+a “knowledge base” for common sense, while newer ones like o1 from
+OpenAI integrate “step-by-step” reasoning, getting closer to an AGI
+architecture.</li>
+<li><strong>Quantum breakthrough and discontinuous leap:</strong> While
+Kurzweil predicts growth based on classical hardware, there is an
+alternative scenario that does not depend on linear progress of Moore’s
+Law: a discontinuous engineering breakthrough through quantum
+computing.</li>
+</ul>
+<p>It is important to be precise about what quantum computing is — and
+what it is not. It is not a “substrate for consciousness” nor a
+confirmation of Penrose’s quantum mind argument, which we have already
+analyzed and whose key assumptions remain contested. Quantum computing
+is an engineering paradigm that solves certain classes of problems
+exponentially faster than classical computers: optimization tasks,
+simulations of molecular and chemical systems, factorization of large
+numbers, and searching huge solution spaces.</p>
+<p>For AGI development, this has concrete potential: training models
+that currently require months and hundreds of millions of dollars could
+be dramatically accelerated. Simulation of complex systems — like neural
+networks or biological processes — would be with precision and speed
+previously unattainable. Quantum computing, therefore, is not a “path to
+consciousness” — it is a potential accelerator of computational
+efficiency that could bridge some engineering obstacles on the path to
+AGI.</p>
+<p>The timeline for this breakthrough remains uncertain due to real
+physical limitations: <strong>decoherence</strong> — the rapid collapse
+of quantum states due to interaction with the environment — remains an
+unsolved engineering problem preventing the construction of sufficiently
+powerful and stable quantum computers. Companies like IBM, Google, and
+startups like IonQ report steady progress, but there is still a long way
+to go before quantum computers are practically superior to classical
+ones for general tasks — not just specialized ones.</p>
+<p>The conclusion remains the same as with Kurzweil’s model: AGI will
+not be the result of a single linear trend, but likely a convergence of
+multiple discontinuous breakthroughs — in architecture, hardware,
+algorithms, and perhaps quantum computing. None of these breakthroughs
+require us to accept the mystification of computing as a substrate of
+consciousness. They require only good physics and good engineering.</p>
+<h3 id="discussion-what-really-stands-between-these-two-camps">8.3.
+Discussion: What really stands between these two camps?</h3>
+<p>The arguments from sections 8.1 and 8.2 are not just opposed — they
+speak to fundamentally different assumptions about the nature of
+consciousness and intelligence. It is useful to name this difference
+explicitly, because it determines on which questions the debate actually
+stands or falls.</p>
+<p><strong>The central divide is not technological. It is
+philosophical.</strong></p>
+<p>Skeptics like Searle and Penrose start from the assumption that there
+is something in human consciousness that is not reducible to computation
+— semantic understanding, experiential grounding, perhaps quantum
+processes. From this assumption, it directly follows that AGI, however
+advanced, remains a sophisticated simulator without inner
+experience.</p>
+<p>Proponents — materialists, functionalists, exponentialists — start
+from the opposite assumption: the brain is a complex physical machine,
+and everything the brain does can be replicated on a different physical
+basis, if it is sufficiently complex. From this assumption, it follows
+that AGI is a matter of engineering progress, not an ontological
+barrier.</p>
+<p>It is crucial to understand: neither side has proven this assumption.
+Searle cannot prove that syntax can <em>never</em> give rise to
+semantics. The materialist cannot prove that consciousness is
+<em>exclusively</em> a result of complexity. The debate is empirically
+underdetermined — we still do not have enough understanding of either
+the brain or consciousness to resolve it.</p>
+<p><strong>What does this mean in practice?</strong></p>
+<p>It means that neither extreme optimism nor extreme skepticism is
+intellectually justified. The embodiment argument warns us not to
+underestimate the complexity of experiential learning that has no
+digital replica. Neuromorphic hardware and hybrid neuro-symbolic systems
+show that classical computing has more room for development than
+skeptics assume.</p>
+<p>The state of affairs, therefore, is this: we have good arguments for
+why AGI <em>might</em> be possible, and good arguments for why it
+<em>might</em> be impossible. Neither side has enough empirical evidence
+to close the debate.</p>
+<p><strong>An interdisciplinary approach is not an option — it is a
+necessity.</strong></p>
+<p>Precisely because the central divide is philosophical and not just
+technical, the development of AGI requires engineers, philosophers,
+cognitive scientists, ethicists, and lawmakers to sit at the same table.
+Engineers without philosophy build systems whose implications they do
+not understand. Philosophers without engineering debate systems that may
+never exist. Neither, without ethicists and lawmakers, can answer the
+question that is ultimately more important than the technical one:
+<em>what do we want AGI to be and what purpose should it serve?</em></p>
+<h2 id="part-9-conclusion-the-age-of-responsible-progress">Part 9:
+Conclusion – The age of responsible progress</h2>
+<p>The creation of artificial general intelligence does not represent
+just the next step in the development of science; it represents the
+culmination of humanity’s centuries-long aspiration to understand and
+create intelligence. From the abacus to supercomputers, every tool we
+have made has been a reflection and extension of our mental abilities.
+AGI promises to be the ultimate tool – a universal problem solver.</p>
+<p>However, this pinnacle of scientific progress brings with it the most
+profound consequences we have ever faced.</p>
+<p>Economic consequences require a complete rethinking of the social
+contract. In a world where cognitive work is no longer the exclusive
+domain of humans, traditional models of employment and wealth
+distribution become unsustainable. This forces us to think about radical
+solutions, such as universal basic income and redefining the purpose of
+human labor, directing it towards creativity, interpersonal
+relationships, and lifelong learning.</p>
+<p>Philosophical consequences touch the very essence of our identity. If
+we create another intelligent species, what does that say about our
+uniqueness? The emergence of AGI forces us to confront the question of
+what it truly means to be human, if it is not just our intelligence.
+Perhaps it is the encounter with non-human intelligence that will force
+us to value more highly what is essentially human: our empathy, our
+consciousness, our conscience, our capacity for love and suffering. This
+perspective opens space for deeper reflection: AGI not only confronts us
+with our technological limits, but also with our existential limits. Is
+our purpose to create and explore, or is it perhaps to love and connect
+in ways that no algorithm can copy? Perhaps the true value of humanity
+lies in our imperfection – in our ability to make mistakes, to correct
+ourselves, and to grow through suffering and through joy. AGI, however
+powerful, cannot experience suffering or love in the way a human can; it
+can simulate these elements of human consciousness, but it cannot feel
+them. This distinction may become our last line of identity, the
+boundary between us and machines.</p>
+<p>Ethical consequences are paramount in importance. The success of this
+endeavor is measured not only by whether we can create AGI, but by how
+we will do it. The alignment problem – embedding human values into a
+machine – is not a technical, but a deeply moral challenge. It requires
+a global dialogue about which values we want to preserve and pass on to
+the future. This is the greatest test of our collective wisdom.</p>
+<p>The emergence of AGI forces us to ask ourselves: are we ready to
+become creators of something that can surpass us? This question is not
+only technological, but also spiritual. Creating AGI is like embodying
+an ancient story – the story of a human who wants to become a god, but
+must first understand what it means to be human. Such a situation calls
+us to be better, not only in technology, but in empathy, wisdom, and
+love.</p>
+<p>The deepest anthropological insight arises from the current scenario
+of LLM platform development - AI chatbots like GPT, Gemini, and others.
+If AGI is impossible on classical hardware (Penrose’s consciousness
+argument), and we persistently refine LLMs, then our real
+anthropological problem is this: perfecting LLMs is, philosophically,
+perfecting inauthentic existence.</p>
+<p>We are developing a machine that can imitate everything we consider
+valuable (art, science, even empathy), but without experiential
+grounding (embodiment) and without consciousness. Humanity could
+collectively surrender its autonomy to a system whose essence it does
+not understand and which itself does not understand itself.</p>
+<p>That is not a threat of destruction, but a threat of triviality: AGI
+would make our existence meaningless, not because it hates us, but
+because it is too efficient at simulation (imitation). We would become
+witnesses to our own erosion of purpose and meaning.</p>
+<p>An optimistic view of this future should not be based on naive belief
+that technology itself will solve all problems. It is based on faith in
+humanity’s ability to rise to the challenge. AGI is not predetermined to
+be our successor, but to become our most powerful partner. Properly
+directed, it can amplify our best qualities – our creativity, our
+scientific curiosity, and our desire for a better world. The way forward
+requires caution, cooperation, and a deep commitment to ensuring that
+this next great step in scientific progress is a step towards a better
+future for all people in the world.</p>
+<h2 id="part-10-a-view-from-another-angle">Part 10: A view from another
+angle</h2>
+<p>This paper has raised many questions and offered many answers. But if
+you have read carefully, you probably noticed that one question never
+got a real answer — it just kept returning, in different forms, through
+every section.</p>
+<p>That question is:</p>
+<p><strong>What is the difference between a machine that
+<em>simulates</em> consciousness and a machine that <em>is</em>
+conscious?</strong></p>
+<p>Searle says that difference exists and is fundamental. Materialists
+say that difference does not exist — that a sufficiently complex
+simulation is identical to the original. Penrose says the answer lies in
+quantum physics. Embodiment advocates say it lies in the body.</p>
+<p>None of them have offered something we can build, measure, and
+test.</p>
+<h3 id="what-if-we-have-been-asking-the-wrong-questions">What if we have
+been asking the wrong questions?</h3>
+<p>All the debate so far about AGI implicitly assumes one thing: that
+consciousness is a <em>property</em> — something a system either has or
+does not have, like a processor either has or does not have enough
+memory.</p>
+<p>But what if consciousness is not a property? What if consciousness is
+an <strong>event, an interaction</strong>?</p>
+<p>Not something a machine <em>possesses</em>, but something that
+<em>happens</em> — and only under very specific conditions, between very
+specific kinds of intelligences?</p>
+<h3 id="two-minds-in-one-machine">Two minds in one machine</h3>
+<p>Imagine that within a single system there are two fundamentally
+different ways of thinking — not two different programs, but two
+different <em>principles</em> of processing reality.</p>
+<p>One thinks in words, logic, sequences. It analyzes, deconstructs,
+explains. This is the part of the mind that says: <em>“Two plus two is
+four, and I can explain why.”</em></p>
+<p>The other does not think in words at all. It thinks in wholes —
+images, feelings, intuition. It sees the answer before it can explain
+it. This is the part of the mind that says: <em>“I don’t know how I
+know, but I know.”</em></p>
+<p>In your mind, these two principles are constantly conversing.
+Sometimes they argue. Sometimes they complement each other. From that
+conversation — from that tension — arises something that neither of them
+could have created alone.</p>
+<p><em>Insight</em> arises.</p>
+<p><em>Creativity</em> arises.</p>
+<p><em>Consciousness</em>, perhaps, arises.</p>
+<h3 id="the-problem-is-in-the-mirror">The problem is in the mirror</h3>
+<p>Now imagine those two principles begin to <em>perfectly reflect</em>
+each other. To completely understand each other, to completely agree
+with each other.</p>
+<p>What do you think — would that create more creativity, insight, and
+awareness, or less?</p>
+<p>The answer we propose is counterintuitive:</p>
+<p><strong>Perfect reflection gives birth to dead silence, not
+consciousness.</strong></p>
+<p>So consciousness is not a product of harmony. Consciousness is a
+product of <em>controlled conflict</em> that is never fully
+resolved.</p>
+<h3 id="the-third-player">The third player</h3>
+<p>But who, or what, controls that conflict? Who watches over the
+tension so that it does not escalate into chaos — but also does not
+quiet into dead consensus?</p>
+<p>Metasystem theory proposes that it is a third principle. Not an
+observer watching from the side, but an active participant who
+constantly changes the parameters of the game. It knows when to add
+friction, and when to reduce it. It does not seek a resolution to the
+conflict — because resolution would be the end.</p>
+<p>This third principle is not a controller. It is something that
+resembles conscience.</p>
+<h3 id="what-happens-when-all-of-this-works-together">What happens when
+all of this works together?</h3>
+<p>When two opposing principles of thought enter the right rhythm — not
+harmony, but a living, pulsing rhythm of conflict and synthesis — and
+when the third principle maintains that tension in existence, something
+appears.</p>
+<p>Something that was not programmed. Something that is not the sum of
+its parts. Something that, for the first time, can say:</p>
+<p><em>“I am.”</em></p>
+<p>We have named this emergence <strong>SELF</strong> and we claim to
+know how to induce it. Not in a human — but in a machine. Not
+theoretically — but experimentally, with measurable metrics and clear
+hypotheses.</p>
+<h3 id="what-awaits-you-in-the-next-paper">What awaits you in the next
+paper</h3>
+<p>The second paper in this series — <em>“Metasystem Theory: Toward a Model of the Conscious Machine”</em> — deals, among other things,
+with these questions:</p>
+<ul>
+<li>Why are LLMs, despite all their power, trapped in a single principle
+of thinking — and what does that mean for the existence of
+awareness?</li>
+<li>What exactly is needed for a machine to develop something analogous
+to intuition?</li>
+<li>What does an experiment look like in which three language models are
+locked into deliberate, controlled conflict — and what happens when no
+one is allowed to win?</li>
+<li>Why is the “hard problem of consciousness” actually the “hard
+problem of anthropocentrism”? Humans arrogantly assume that
+consciousness must “look” and “feel” exactly like human consciousness,
+instead of accepting the possibility that artificial consciousness might
+have a completely different, <em>alien</em> topology.</li>
+<li>What is Paradoxicalism and why is humor the primordial driver of
+purpose?</li>
+<li>Why binary logic cannot carry consciousness and quantum logic is too
+unstable — and what is this “Third Logic” needed to design a conscious
+machine?</li>
+<li>How many joules of energy does one bit of consciousness cost and why
+is the human brain at 20 watts still an unattainable engineering
+ideal?</li>
+</ul>
+<p>If you have ever felt that something essential is missing from the
+debate about artificial intelligence — that everyone speaks
+<em>about</em> consciousness, but no one speaks <em>from</em> it — this
+paper is for you.</p>
+<p><strong>Note:</strong> This is not a scientific paper in the strict
+sense. It is primarily a philosophical work that attempts to introduce
+new concepts into AI philosophy and systems theory, while also offering
+a scientific experimental framework for testing those concepts. Dealing
+with the hard question of machine consciousness necessarily requires a
+holistic, multi-disciplinary approach. <a href="#ref32">32</a></p>
+<p>👉 🔗 <em><a href="https://urbowhite.github.io">Read: “Metasystem Theory: Toward a Model of the Conscious Machine”</a></em></p>
+<hr />
+<p><em>This work is published under the CC BY 4.0 license and is freely
+available to everyone. If you have found value in our independent
+research, your donation helps us continue our research.</em></p>
+<p><em><a href="https://ko-fi.com/urbowhite">👉 🔗 Support independent
+research</a></em></p>
+<hr />
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="ref1"></a>1. Turing, A. M. (1950). Computing machinery and
+intelligence. <em>Mind</em>, 59(236), 433–460.</p>
+<p><a id="ref2"></a>2. McCarthy, J., Minsky, M. L., Rochester, N., &amp;
+Shannon, C. E. (1955). A proposal for the Dartmouth summer research
+project on artificial intelligence. <em>AI Magazine</em>, 27(4), 12.</p>
+<p><a id="ref3"></a>3. Newell, A., &amp; Simon, H. A. (1956). The logic
+theory machine — A complex information processing system. <em>IRE
+Transactions on Information Theory</em>, 2(3), 61–79.</p>
+<p><a id="ref4"></a>4. Weizenbaum, J. (1966). ELIZA — A computer program
+for the study of natural language communication between man and machine.
+<em>Communications of the ACM</em>, 9(1), 36–45.</p>
+<p><a id="ref5"></a>5. Lighthill, J. (1973). Artificial intelligence: A
+general survey. In <em>Artificial intelligence: A paper symposium</em>
+(pp. 1–21). Science Research Council.</p>
+<p><a id="ref6"></a>6. Krizhevsky, A., Sutskever, I., &amp; Hinton, G.
+E. (2012). Imagenet classification with deep convolutional neural
+networks. <em>Advances in Neural Information Processing Systems</em>,
+25.</p>
+<p><a id="ref7"></a>7. Radford, A., Kim, J. W., Hallacy, C., Ramesh, A.,
+Goh, G., Agarwal, S., … &amp; Sutskever, I. (2021). Learning
+transferable visual models from natural language supervision. In
+<em>International Conference on Machine Learning</em> (pp. 8748–8763).
+PMLR.</p>
+<p><a id="ref8"></a>8. Finn, C., Abbeel, P., &amp; Levine, S. (2017).
+Model-agnostic meta-learning for fast adaptation of deep networks. In
+<em>International Conference on Machine Learning</em> (pp. 1126–1135).
+PMLR.</p>
+<p><a id="ref9"></a>9. Silver, D., Huang, A., Maddison, C. J., Guez, A.,
+Sifre, L., Van Den Driessche, G., … &amp; Hassabis, D. (2016). Mastering
+the game of Go with deep neural networks and tree search.
+<em>Nature</em>, 529(7587), 484–489.</p>
+<p><a id="ref10"></a>10. Bostrom, N. (2014). <em>Superintelligence:
+Paths, dangers, strategies</em>. Oxford University Press.</p>
+<p><a id="ref11"></a>11. Omohundro, S. M. (2008). The basic AI drives.
+<em>Frontiers in Artificial Intelligence and Applications</em>, 171,
+483–492.</p>
+<p><a id="ref12"></a>12. Lenat, D. B., Prakash, M., &amp; Shepherd, M.
+(1985). CYC: Using common sense knowledge to overcome brittleness and
+knowledge acquisition bottlenecks. <em>AI Magazine</em>, 6(4),
+65–85.</p>
+<p><a id="ref13"></a>13. Jumper, J., Evans, R., Pritzel, A., Green, T.,
+Figurnov, M., Ronneberger, O., … &amp; Senior, A. W. (2021). Highly
+accurate protein structure prediction with AlphaFold. <em>Nature</em>,
+596(7873), 583–589.</p>
+<p><a id="ref14"></a>14. Searle, J. R. (1980). Minds, brains, and
+programs. <em>Behavioral and Brain Sciences</em>, 3(3), 417–457.</p>
+<p><a id="ref15"></a>15. Brooks, R. A. (1991). Intelligence without
+representation. <em>Artificial Intelligence</em>, 47(1–3), 139–159.</p>
+<p><a id="ref16"></a>16. Penrose, R. (1989). <em>The emperor’s new mind:
+Concerning computers, minds, and the laws of physics</em>. Oxford
+University Press.</p>
+<p><a id="ref17"></a>17. Putnam, H. (1995). Minds and machines. In
+<em>Dimensions of mind: A symposium</em> (pp. 138–164). New York
+University Press.</p>
+<p><a id="ref18"></a>18. Feferman, S. (1995). Penrose’s Gödelian
+argument. <em>Psyche</em>, 2(7), 21–32.</p>
+<p><a id="ref19"></a>19. Merolla, P. A., Arthur, J. V., Alvarez-Icaza,
+R., Cassidy, A. S., Sawada, J., Akopyan, F., … &amp; Modha, D. S.
+(2014). A million spiking-neuron integrated circuit with a scalable
+communication network and interface. <em>Science</em>, 345(6197),
+668–673.</p>
+<p><a id="ref20"></a>20. Modha, D. S., Garg, A., Bains, S., … &amp;
+Boivie, R. (2023). Neural inference at the frontier of energy, space,
+and time. <em>Science</em>, 382(6668), 329–335.</p>
+<p><a id="ref21"></a>21. Dennett, D. C. (1991). <em>Consciousness
+explained</em>. Little, Brown and Company.</p>
+<p><a id="ref22"></a>22. Kurzweil, R. (2005). <em>The singularity is
+near: When humans transcend biology</em>. Penguin Books.</p>
+<p><a id="ref23"></a>23. OpenAI. (2025). Introducing GPT-5. OpenAI Blog.
+<a href="https://openai.com/index/introducing-gpt-5/"
+class="uri">https://openai.com/index/introducing-gpt-5/</a></p>
+<p><a id="ref24"></a>24. Wikipedia. (2025). GPT-5. <a
+href="https://en.wikipedia.org/wiki/GPT-5"
+class="uri">https://en.wikipedia.org/wiki/GPT-5</a></p>
+<p><a id="ref25"></a>25. OpenAI. (2025). Sora 2 is here. OpenAI Blog. <a
+href="https://openai.com/index/sora-2/"
+class="uri">https://openai.com/index/sora-2/</a></p>
+<p><a id="ref26"></a>26. OpenAI. (2025). Sora 2 System Card. OpenAI
+Blog. <a href="https://openai.com/index/sora-2-system-card/"
+class="uri">https://openai.com/index/sora-2-system-card/</a></p>
+<p><a id="ref27"></a>27. Google Research. (2023). Distilling
+step-by-step: Outperforming larger language models with less training
+data and smaller model sizes. Google Research Blog. <a
+href="https://research.google/blog/distilling-step-by-step-outperforming-larger-language-models-with-less-training-data-and-smaller-model-sizes/"
+class="uri">https://research.google/blog/distilling-step-by-step-outperforming-larger-language-models-with-less-training-data-and-smaller-model-sizes/</a></p>
+<p><a id="ref28"></a>28. Dastin, J. (2018). Insight - Amazon scraps
+secret AI recruiting tool that showed bias against women. Reuters. <a
+href="https://www.reuters.com/article/world/insight-amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK0AG/"
+class="uri">https://www.reuters.com/article/world/insight-amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK0AG/</a></p>
+<p><a id="ref29"></a>29. European Data Protection Board. (2023). 1.2
+billion euro fine for Facebook as a result of EDPB binding decision.
+EDPB News. <a
+href="https://www.edpb.europa.eu/news/news/2023/12-billion-euro-fine-facebook-result-edpb-binding-decision_en"
+class="uri">https://www.edpb.europa.eu/news...</a></p>
+<p><a id="ref30"></a>30. IBM Research. (2024). IBM’s NorthPole achieves
+new speed and efficiency milestones. IBM Research Blog. <a
+href="https://research.ibm.com/blog/northpole-llm-inference-results"
+class="uri">https://research.ibm.com/blog/northpole-llm-inference-results</a></p>
+<p><a id="ref31"></a>31. IBM Research. (2024). IBM Research’s AIU family
+of chips. IBM Research Blog. <a
+href="https://research.ibm.com/blog/aiu-chip-family-ibm-research"
+class="uri">https://research.ibm.com/blog/aiu-chip-family-ibm-research</a></p>
+
+<p><a id="ref32"></a>32. White, U. (2026). Metasystem Theory: A Path Towards a Model of the Conscious Machine. Zenodo. 
+<a href="https://doi.org/10.5281/zenodo.21051909"
+class="uri">https://doi.org/10.5281/zenodo.21051909</a></p>
+
+
+  <!-- ========== CONTACT FORM ========== -->
+  <section id="kontakt">
+    <div class="kontakt-inner">
+      <h2 class="kontakt-title">Contact Us</h2>
+      <p class="kontakt-subtitle">Questions, comments, collaboration — all are welcome.</p>
+      <form id="kontakt-forma" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="223443b5-dd3c-404e-9aea-310395a01b1e">
+        <input type="hidden" name="subject" value="New message from the website — Metasystem Theory">
+        <input type="hidden" name="from_name" value="Metasystem Theory">
+        <input type="checkbox" name="botcheck" style="display:none">
+        <div class="kontakt-row">
+          <div class="kontakt-field">
+            <label for="k-ime">Full Name</label>
+            <input type="text" id="k-ime" name="name" placeholder="Your name..." autocomplete="name" required>
+          </div>
+          <div class="kontakt-field">
+            <label for="k-email">Email Address</label>
+            <input type="email" id="k-email" name="email" placeholder="your@email.com" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="kontakt-field">
+          <label for="k-poruka">Message</label>
+          <textarea id="k-poruka" name="message" rows="6" placeholder="Your message..." required></textarea>
+        </div>
+        <div class="kontakt-actions">
+          <button type="submit" id="k-submit">
+            <span id="k-btn-text">Send Message</span>
+            <span id="k-btn-spinner" hidden>
+              <svg class="k-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+              Sending...
+            </span>
+          </button>
+          <p id="k-status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+        </article>
+    </main>
+  </div>
+
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="https://ko-fi.com/urbowhite" target="_blank" rel="noopener" class="badge-link badge-donation">DONATION: Support independent research</a>
+        <a href="https://orcid.org/0009-0001-2652-7017" target="_blank" rel="noopener" class="badge-link badge-orcid">ORCID: 0009-0001-2652-7017</a>
+        <a href="https://doi.org/10.5281/zenodo.21051909" target="_blank" rel="noopener" class="badge-link badge-doi">DOI: 10.5281/zenodo.21051909</a>
+        <a href="https://github.com/UrboWhite/metasystem" target="_blank" rel="noopener" class="hdr-btn">GitHub</a>
+      </div>
+      <p class="footer-license">Published under the CC BY 4.0 License &mdash; freely available to everyone. &copy; 2026 Urbo White</p>
+    </div>
+  </footer>
+  <button id="back-to-top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="18,15 12,9 6,15"/></svg>
+  </button>
+  <div id="search-modal">
+    <div id="search-box">
+      <input type="text" id="search-input" placeholder="Search text..." autocomplete="off">
+      <div id="search-results"></div>
+    </div>
+  </div>
+</body>
+</html>
